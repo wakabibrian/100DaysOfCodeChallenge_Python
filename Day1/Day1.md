@@ -2,5 +2,7 @@
 I am learning "Working With Variables" today.
 
 Today I learn't;
-- Printing
-- 
+- Printing - print() function
+- String Manipulation:
+    - Separating string lines using \n
+    - String concatenation with +
