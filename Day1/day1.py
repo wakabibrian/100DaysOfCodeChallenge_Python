@@ -29,5 +29,20 @@
 # print(len(input("What is your name? ")))
 
 #-----------------Variables--------------------#
-name = input("What is your name? ")
-print(name)
+# Variables are responsible for storing  pieces of data
+# It can be changed
+# name = input("What is your name? ")
+# print(name)
+
+# Variables Exercise
+# Write a program that switches the values stored in the variables a and b.
+
+a = input("a: ")
+b = input("b: ")
+
+temp = a
+a = b
+b = temp
+
+print("a: " + a)
+print("b: " + b)
