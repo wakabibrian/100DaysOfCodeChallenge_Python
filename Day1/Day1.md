@@ -8,3 +8,4 @@ Today I learn't;
     - String concatenation with +
 3. Input function
 4. Using Thony App; for debbuging
+5. How to write single line comments

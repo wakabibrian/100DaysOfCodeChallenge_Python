@@ -1,5 +1,5 @@
 #-----------------Printing - print() function--------------------#
-# print("Hello World!") #Use the print() function
+# print("Hello World!") #Use the print() function to print to console
 
 #Printing Exercise
     #Write a Python code which prints the lines as below
@@ -20,4 +20,10 @@
 
 #-----------------Input Function--------------------#
 # Used for getting inputs from the user
-print("Hello " + input("What is your name? "))
+# print("Hello " + input("What is your name? "))
+
+#Input Exercise
+    # Write a program that prints the number of characters in a user's name. 
+    # You might need to Google for a function that calculates the length of a string.
+
+# print(len(input("What is your name? ")))
