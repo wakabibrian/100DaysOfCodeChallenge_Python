@@ -2,5 +2,5 @@
 I am learning "Working With Variables" today.
 
 Today I learn't;
-- Printingad
+- Printing
 - 
