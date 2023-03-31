@@ -9,3 +9,4 @@ Today I learn't;
 3. Input function
 4. Using Thony App; for debbuging
 5. How to write single line comments
+6. Variables

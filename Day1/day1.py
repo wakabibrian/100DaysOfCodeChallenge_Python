@@ -27,3 +27,7 @@
     # You might need to Google for a function that calculates the length of a string.
 
 # print(len(input("What is your name? ")))
+
+#-----------------Variables--------------------#
+name = input("What is your name? ")
+print(name)
