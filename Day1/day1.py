@@ -16,4 +16,8 @@
 # print("This is the first line.\nThis is the second line.")
 
 #-----------------String concatenation with +--------------------#
-print("Hello" + " Wakabi")
+# print("Hello" + " Wakabi")
+
+#-----------------Input Function--------------------#
+# Used for getting inputs from the user
+print("Hello " + input("What is your name? "))
