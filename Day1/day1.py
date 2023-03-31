@@ -52,7 +52,7 @@
 # print("a: " + a)
 # print("b: " + b)
 
-# -----------------Day 1--------------------#
+# -----------------Day 1 Project--------------------#
 # Day 1 Project: Band Name Generator
 # 1. Create a greeting for your program.
 # 2. Ask the user for the city that they grew up in.
