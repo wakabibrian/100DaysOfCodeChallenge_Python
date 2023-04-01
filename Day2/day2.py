@@ -79,11 +79,29 @@
 # You have x days, y weeks, and z months left.
 # Where x, y and z are replaced with the actual calculated numbers.
 
-age = int(input("What is your current age? "))
-years_left = 90 - age
-months_left = years_left*12
-weeks_left = years_left*52
-days_left = years_left * 365
+# age = int(input("What is your current age? "))
+# years_left = 90 - age
+# months_left = years_left*12
+# weeks_left = years_left*52
+# days_left = years_left * 365
 
-message = f"You have {days_left} days, {weeks_left} weeks, and {months_left} months left"
+# message = f"You have {days_left} days, {weeks_left} weeks, and {months_left} months left"
+# print(message)
+
+# -----------------Day 2 Project: Tip Calculator--------------------#
+#If the bill was $150.00, split between 5 people, with 12% tip. 
+#Each person should pay (150.00 / 5) * 1.12 = 33.6
+#Format the result to 2 decimal places = 33.60
+#Tip: There are 2 ways to round a number. You might have to do some Googling to solve this.💪
+
+#Solution
+print("Welcome to the Tip Calculator")
+total_bill = float(input("What's the total bill? $"))
+percentage_tip = int(input("What percentage tip would you like to give? 10, 12, 15? "))
+total_people = int(input("How many people to split the bill? "))
+
+total_bill_with_perc = total_bill + (total_bill*(percentage_tip/100))
+tip_calc = (total_bill_with_perc / total_people)
+tip_calc_rounded = round(tip_calc, 2)
+message = f"Each person should pay: ${tip_calc_rounded}"
 print(message)
