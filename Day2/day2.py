@@ -95,13 +95,13 @@
 #Tip: There are 2 ways to round a number. You might have to do some Googling to solve this.💪
 
 #Solution
-print("Welcome to the Tip Calculator")
-total_bill = float(input("What's the total bill? $"))
-percentage_tip = int(input("What percentage tip would you like to give? 10, 12, 15? "))
-total_people = int(input("How many people to split the bill? "))
+# print("Welcome to the Tip Calculator")
+# total_bill = float(input("What's the total bill? $"))
+# percentage_tip = int(input("What percentage tip would you like to give? 10, 12, 15? "))
+# total_people = int(input("How many people to split the bill? "))
 
-total_bill_with_perc = total_bill + (total_bill*(percentage_tip/100))
-tip_calc = (total_bill_with_perc / total_people)
-tip_calc_rounded = round(tip_calc, 2)
-message = f"Each person should pay: ${tip_calc_rounded}"
-print(message)
+# total_bill_with_perc = total_bill + (total_bill*(percentage_tip/100))
+# tip_calc = (total_bill_with_perc / total_people)
+# tip_calc_rounded = round(tip_calc, 2)
+# message = f"Each person should pay: ${tip_calc_rounded}"
+# print(message)
