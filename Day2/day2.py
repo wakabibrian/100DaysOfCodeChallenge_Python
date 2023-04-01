@@ -46,14 +46,28 @@
 
 # -----------------BMI Calculator Exercise--------------------#
 # Write a program that calculates the Body Mass Index (BMI) from a user's weight and height.
-# The BMI is a measure of someone's weight taking into account their height. e.g. If a tall person 
-    # and a short person both weigh the same amount, the short person is usually more overweight.
+# The BMI is a measure of someone's weight taking into account their height. e.g. If a tall person
+# and a short person both weigh the same amount, the short person is usually more overweight.
 # The BMI is calculated by dividing a person's weight (in kg) by the square of their height (in m)
 # Warning you should convert the result to a whole number.
 
-#Solution
-height = float(input("Enter your height: "))
-weight = int(input("Enter your weight: "))
+# Solution
+# height = float(input("Enter your height: "))
+# weight = int(input("Enter your weight: "))
 
-bmi = int(weight/height**2) #PEMDAS
-print(bmi)
+# bmi = int(weight/height**2) #PEMDAS
+# print(bmi)
+
+# -----------------Number Manipulation and F Strings--------------------#
+# Rounding Numbers
+# print(round(3/2))
+# print(round(8/3, 2))
+# print(8//3) # Chops digits after a decimal point (Whole number)
+
+#Number manipulation
+score = 0
+score += 1 # Same as score = score + 1; Also use s
+# print(score)
+
+# F strings
+print(f"Your score is {score}")

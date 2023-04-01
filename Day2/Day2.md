@@ -5,3 +5,5 @@ Today I learn't;
 1. Primitive Data Types
 2. Type Errors, Type Checking and Type Conversations
 3. Mathematical operators
+4. Number Manipulation and F Strings
+ 
