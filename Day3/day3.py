@@ -76,15 +76,19 @@
 #     **unless** the year is also evenly divisible by 400
 
 # Solution:
-year = int(input("Which year do you want to check? "))
+# year = int(input("Which year do you want to check? "))
 
-if year % 4 == 0:
-    if year % 100 == 0:
-        if year % 400 == 0:
-            print("Leap Year")
-        else:
-           print("Not Leap Year") 
-    else:
-        print("Leap Year")
-else:
-    print("Not Leap Year")
+# if year % 4 == 0:
+#     if year % 100 == 0:
+#         if year % 400 == 0:
+#             print("Leap Year")
+#         else:
+#            print("Not Leap Year") 
+#     else:
+#         print("Leap Year")
+# else:
+#     print("Not Leap Year")
+
+# -----------------Multiple if statement in succession--------------------#
+# Checking multiple conditions even if the first one was true
+
