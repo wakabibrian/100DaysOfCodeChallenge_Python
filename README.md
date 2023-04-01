@@ -8,6 +8,6 @@ More info [here](Day1/Day1.md)
 I am learning "Understanding Data Types and Mathematical Operators" today.
 More info [here](Day2/Day2.md) 
 
-## Day 2
+## Day 3
 I am learning "Control Flow & Logic Operators" today.
 More info [here](Day3/Day3.md) 
