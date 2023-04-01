@@ -28,3 +28,11 @@
 
 # print(70 + float("170.5"))
 
+# Data Type Exercise
+# Write a program that adds the digits in a 2 digit number. 
+# e.g. if the input was 35, then the output should be 3 + 5 = 8
+# num = input("Type a two digit number: ")
+# num1 = int(num[0])
+# num2 = int(num[1])
+# print(num1 + num2)
+
