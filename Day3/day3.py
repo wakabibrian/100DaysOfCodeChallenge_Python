@@ -50,20 +50,42 @@
 # Above 35 they are clinically obese
 
 # Solution
-height = float(input("Enter height in m: "))
-weight = int(input("Enter weight in kg: "))
-bmi_float = weight / height ** 2
-bmi = round(bmi_float, 2)
+# height = float(input("Enter height in m: "))
+# weight = int(input("Enter weight in kg: "))
+# bmi_float = weight / height ** 2
+# bmi = round(bmi_float, 2)
 
-if bmi < 18.5:
-    print(f"Your BMI is {bmi}, you are underweight.")
-elif bmi < 25:
-    print(f"Your BMI is {bmi}, you have a normal weight.")
-elif bmi < 30:
-    print(f"Your BMI is {bmi}, you are slightly overweight.")
-elif bmi < 35:
-    print(f"Your BMI is {bmi}, you are obese.")
+# if bmi < 18.5:
+#     print(f"Your BMI is {bmi}, you are underweight.")
+# elif bmi < 25:
+#     print(f"Your BMI is {bmi}, you have a normal weight.")
+# elif bmi < 30:
+#     print(f"Your BMI is {bmi}, you are slightly overweight.")
+# elif bmi < 35:
+#     print(f"Your BMI is {bmi}, you are obese.")
+# else:
+#     print(f"Your BMI is {bmi}, you are clinically obese.")
+
+# Nested If Exercise: Leap Year Exercise
+# Write a program that works out whether if a given year is a leap year. 
+# A normal year has 365 days, leap years have 366, with an extra day in February.
+
+# This is how you work out whether if a particular year is a leap year.
+#     on every year that is evenly divisible by 4 
+#     **except** every year that is evenly divisible by 100 
+#     **unless** the year is also evenly divisible by 400
+
+# Solution:
+year = int(input("Which year do you want to check? "))
+
+if year % 4 == 0:
+    if year % 100 == 0:
+        print("Not Leap Year")
+        if year % 400 == 0:
+            print("Leap Year")
+        else:
+           print("Not Leap Year") 
+    else:
+        print("Leap Year")
 else:
-    print(f"Your BMI is {bmi}, you are clinically obese.")
-
-
+    print("Not Leap Year")
