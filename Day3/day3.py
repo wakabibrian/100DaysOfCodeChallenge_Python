@@ -92,28 +92,72 @@
 # -----------------Multiple if statement in succession--------------------#
 # Checking multiple conditions even if the first one was true
 
-print("Welcome to the rollercoaster!")
-height = int(input("What is your height in cm? "))
-bill =0
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm? "))
+# bill =0
 
-if height >120:
-    print("You can ride the rollcoaster!")
-    age = int(input("What is your age? "))
-    if age < 12:
-        bill = 5
-        print(f"Child tickets are for ${bill}.")
-    elif age <= 18:
-        bill = 7
-        print(f"Youth tickets are for ${bill}.")
+# if height >120:
+#     print("You can ride the rollcoaster!")
+#     age = int(input("What is your age? "))
+#     if age < 12:
+#         bill = 5
+#         print(f"Child tickets are for ${bill}.")
+#     elif age <= 18:
+#         bill = 7
+#         print(f"Youth tickets are for ${bill}.")
+#     else:
+#         bill = 12
+#         print(f"Adult tickets are for ${bill}.")
+
+#     wants_photo = input("Do you want photo? Y or N: ")
+#     if wants_photo == "Y":
+#         bill += 3
+
+#     print(f"Your total bill is ${bill}")
+# else:
+#     print("Sorry you have to grow before you can ride.")
+
+#######Multiple if statements exercise
+# Congratulations, you've got a job at Python Pizza. 
+# Your first job is to build an automatic pizza order program.
+# Based on a user's order, work out their final bill.
+# Small Pizza: $15
+# Medium Pizza: $20
+# Large Pizza: $25
+# Pepperoni for Small Pizza: +$2
+# Pepperoni for Medium or Large Pizza: +$3
+# Extra cheese for any size pizza: + $1
+
+print("Welcome to Pyhton Pizza Deliveries!")
+size = input("What size of Pizza do you want? S, M or L ")
+want_pepperoni = input("Do you want Pepperoni? Y or N ")
+want_extra_cheese = input("Do you want Extra Cheese? Y or N ")
+final_bill = 0
+
+
+if size == "S":
+    final_bill += 15
+elif size == "M":
+    final_bill += 20
+elif size == "L":
+    final_bill += 25
+
+if want_pepperoni == "Y":
+    if size == "S":
+        final_bill += 2
     else:
-        bill = 12
-        print(f"Adult tickets are for ${bill}.")
+        final_bill += 3
 
-    wants_photo = input("Do you want photo? Y or N: ")
-    if wants_photo == "Y":
-        bill += 3
+if want_extra_cheese == "Y":
+    final_bill += 1
 
-    print(f"Your total bill is ${bill}")
-else:
-    print("Sorry you have to grow before you can ride.")
+print(f"Final bill is: ${final_bill}")
+
+
+
+
+
+
+
+
 
