@@ -128,30 +128,32 @@
 # Pepperoni for Medium or Large Pizza: +$3
 # Extra cheese for any size pizza: + $1
 
-print("Welcome to Pyhton Pizza Deliveries!")
-size = input("What size of Pizza do you want? S, M or L ")
-want_pepperoni = input("Do you want Pepperoni? Y or N ")
-want_extra_cheese = input("Do you want Extra Cheese? Y or N ")
-final_bill = 0
+# print("Welcome to Pyhton Pizza Deliveries!")
+# size = input("What size of Pizza do you want? S, M or L ")
+# want_pepperoni = input("Do you want Pepperoni? Y or N ")
+# want_extra_cheese = input("Do you want Extra Cheese? Y or N ")
+# final_bill = 0
 
 
-if size == "S":
-    final_bill += 15
-elif size == "M":
-    final_bill += 20
-elif size == "L":
-    final_bill += 25
+# if size == "S":
+#     final_bill += 15
+# elif size == "M":
+#     final_bill += 20
+# elif size == "L":
+#     final_bill += 25
 
-if want_pepperoni == "Y":
-    if size == "S":
-        final_bill += 2
-    else:
-        final_bill += 3
+# if want_pepperoni == "Y":
+#     if size == "S":
+#         final_bill += 2
+#     else:
+#         final_bill += 3
 
-if want_extra_cheese == "Y":
-    final_bill += 1
+# if want_extra_cheese == "Y":
+#     final_bill += 1
 
-print(f"Final bill is: ${final_bill}")
+# print(f"Final bill is: ${final_bill}")
+
+# -----------------Logical Operators--------------------#
 
 
 

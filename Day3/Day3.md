@@ -6,3 +6,4 @@ Today I learn't;
 2. Comparison operators
 3. Nested if statements and elif statements
 4. Multiple if statement in succession
+5. Logical Operators
