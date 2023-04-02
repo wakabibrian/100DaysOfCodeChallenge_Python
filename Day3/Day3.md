@@ -7,3 +7,4 @@ Today I learn't;
 3. Nested if statements and elif statements
 4. Multiple if statement in succession
 5. Logical Operators
+6. Drawing Flow Diagrams

@@ -154,6 +154,11 @@
 # print(f"Final bill is: ${final_bill}")
 
 # -----------------Logical Operators--------------------#
+# Checking for multiple conditions in the same line of code
+# Logical Operators: and, or and not
+# and operator, A and B: both A and B have to be True
+# or operator, A or B: one of A or B have to be True
+# not operator, not A: reverses a condition
 
 
 
