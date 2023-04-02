@@ -177,30 +177,72 @@
 # "Your score is **z**."
 
 # Solution
-print("Welcome to the love caculator!")
-name1 = input("What is your name?\n").lower()
-name2 = input("What is their name?\n").lower()
-name = name1 + name2
-num1, num2 = 0, 0
+# print("Welcome to the love caculator!")
+# name1 = input("What is your name?\n").lower()
+# name2 = input("What is their name?\n").lower()
+# name = name1 + name2
+# num1, num2 = 0, 0
 
-num1 += name.count("t")
-num1 += name.count("r")
-num1 += name.count("u")
-num1 += name.count("e")
+# num1 += name.count("t")
+# num1 += name.count("r")
+# num1 += name.count("u")
+# num1 += name.count("e")
 
-num2 += name.count("l")
-num2 += name.count("o")
-num2 += name.count("v")
-num2 += name.count("e")
+# num2 += name.count("l")
+# num2 += name.count("o")
+# num2 += name.count("v")
+# num2 += name.count("e")
 
-score_str = str(num1) + str(num2)
-score = int(score_str)
+# score_str = str(num1) + str(num2)
+# score = int(score_str)
 
-if score < 10 or score > 90:
-    print(f"Your score is {score}, you go together like coke and mentos.")
-elif score >= 40 and score <= 50:
-    print(f"Your score is {score}, you are alright together.")
+# if score < 10 or score > 90:
+#     print(f"Your score is {score}, you go together like coke and mentos.")
+# elif score >= 40 and score <= 50:
+#     print(f"Your score is {score}, you are alright together.")
+# else:
+#     print(f"Your score is {score}.")
+
+# -----------------Day 3 Project: Treasure Island--------------------#
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.") 
+
+challenge1 = input('You\'re at a crossroad. Where do you want to go? Type "left" or "right" ').lower()
+if challenge1 == "left":
+    challenge2 = input('You\'ve come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across. ').lower()
+    if challenge2 == "wait":
+        challenge3 = input("You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose? ").lower()
+        if challenge3 == "yellow":
+            print("You found the treasure! You Win!")
+        elif challenge3 == "blue":
+            print("You enter a room of beasts. Game Over.")
+        elif challenge3 == "red":
+            print("It's a room full of fire. Game Over.")
+        else:
+            print("You chose a door that doesn't exist. Game Over.")
+    else:
+        print("You get attacked by an angry trout. Game Over.")
 else:
-    print(f"Your score is {score}.")
-
-
+    print("You fell into a hole. Game Over.")

@@ -8,3 +8,4 @@ Today I learn't;
 4. Multiple if statement in succession
 5. Logical Operators
 6. Drawing Flow Diagrams
+7. Day 3 Project: Treasure Island
