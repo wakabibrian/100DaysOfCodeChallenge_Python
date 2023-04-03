@@ -11,3 +11,7 @@ More info [here](Day2/Day2.md)
 ## Day 3
 I am learning "Control Flow & Logic Operators" today.
 More info [here](Day3/Day3.md) 
+
+## Day 4
+I am learning "Randomisation and Python Lists" today.
+More info [here](Day4/Day4.md) 
