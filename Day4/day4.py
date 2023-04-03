@@ -38,6 +38,18 @@
 # states_of_america[1] = "Pencilvania"
 # states_of_america.append("Agelland") # Appending an item to the end of the list
 # states_of_america.extend(["Wakaland", "Kayland", "Loylan"]) # Adding a list to a list
-print(states_of_america)
+# print(states_of_america)
 
 # Exercise
+# You are going to write a program that will select a random name from a list of names.
+# The person selected will have to pay for everybody's food bill.
+import random
+
+name_string = input("Give everybody's names sepparated by a comma: ")
+names = name_string.split(", ")
+
+rand_name_number = random.randint(0, len(names)-1)
+print(rand_name_number)
+
+random_person = names[rand_name_number]
+print(f"{random_person} is going to buy the meal today!")
