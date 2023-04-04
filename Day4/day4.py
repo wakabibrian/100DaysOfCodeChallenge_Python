@@ -126,5 +126,7 @@ elif user_selection == 0 and computer_selection == 2:
     print("You Win!")
 elif user_selection > computer_selection:
     print("You Win!")
-else:
+elif user_selection < computer_selection:
     print("You Loose!")
+else:
+    print("You typed an invalid number, you loose!")
