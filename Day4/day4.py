@@ -122,9 +122,9 @@ print(choices[computer_selection])
 
 if computer_selection == user_selection:
     print("It's a draw")
-elif user_selection > computer_selection:
-    print("You Win!")
 elif user_selection == 0 and computer_selection == 2:
+    print("You Win!")
+elif user_selection > computer_selection:
     print("You Win!")
 else:
     print("You Loose!")
