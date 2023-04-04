@@ -68,14 +68,57 @@
 # dirty_dozen = [fruits, vegetables]
 # print(dirty_dozen[1][1]) #Prints Spinachi
 
-####################### Exercise:Treasure Map
-row1 = ['⬜', '⬜️', '⬜️']
-row2 = ['⬜️', '⬜️', '⬜️']
-row3 = ['⬜️', '⬜️', '⬜️']
-map = [row1, row2, row3]
-print(f"{row1}\n{row2}\n{row3}")
-position = input("Where do you want to put the treasure? ")
-position_x = int(position[0]) - 1
-position_y = int(position[1]) - 1
-map[position_y][position_x] = "x"
-print(f"{row1}\n{row2}\n{row3}")
+# Exercise:Treasure Map
+# row1 = ['⬜', '⬜️', '⬜️']
+# row2 = ['⬜️', '⬜️', '⬜️']
+# row3 = ['⬜️', '⬜️', '⬜️']
+# map = [row1, row2, row3]
+# print(f"{row1}\n{row2}\n{row3}")
+# position = input("Where do you want to put the treasure? ")
+# position_x = int(position[0]) - 1
+# position_y = int(position[1]) - 1
+# map[position_y][position_x] = "X"
+# print(f"{row1}\n{row2}\n{row3}")
+
+# -----------------Day 4 Project: Rock Paper Scissors-------------------#
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+# Write your code below this line 👇
+choices = [rock, paper, scissors]
+user_selection = int(input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors.\n"))
+computer_selection = random.randint(0, 2)
+
+print(choices[user_selection])
+print("Computer chose:\n")
+print(choices[computer_selection])
+
+if computer_selection == user_selection:
+    print("It's a draw")
+elif 

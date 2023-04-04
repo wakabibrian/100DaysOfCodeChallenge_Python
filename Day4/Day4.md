@@ -6,3 +6,4 @@ Today I learn't;
 2. Creating a Module
 3. Lists
 4. IndexErrors and Working with Nested Lists
+5. Day 4 Project: Rock Paper Scissors
