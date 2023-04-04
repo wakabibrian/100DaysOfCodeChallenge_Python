@@ -120,7 +120,9 @@ print(choices[user_selection])
 print("Computer chose:\n")
 print(choices[computer_selection])
 
-if computer_selection == user_selection:
+if user_selection >= 3 or user_selection < 0:
+    print("You typed an invalid number, you loose!")
+elif computer_selection == user_selection:
     print("It's a draw")
 elif user_selection == 0 and computer_selection == 2:
     print("You Win!")
@@ -130,5 +132,3 @@ elif user_selection > computer_selection:
     print("You Win!")
 elif user_selection < computer_selection:
     print("You Loose!")
-else:
-    print("You typed an invalid number, you loose!")
