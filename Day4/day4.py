@@ -112,7 +112,8 @@ scissors = '''
 
 # Write your code below this line 👇
 choices = [rock, paper, scissors]
-user_selection = int(input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors.\n"))
+user_selection = int(
+    input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors.\n"))
 computer_selection = random.randint(0, 2)
 
 print(choices[user_selection])
@@ -121,4 +122,7 @@ print(choices[computer_selection])
 
 if computer_selection == user_selection:
     print("It's a draw")
-elif 
+elif user_selection == 0 and computer_selection == 2 or user_selection == 2 and computer_selection == 1 or user_selection == 1 and computer_selection == 0:
+    print("You win!")
+else:
+    print("You loose!")
