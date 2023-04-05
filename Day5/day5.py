@@ -44,14 +44,30 @@
 # e.g. student_scores = [78, 65, 89, 86, 55, 91, 64, 89]
 # Dont use max() function
 
-scores_list = input("Input a list of student scores ").split(" ")
-for n in range(0, len(scores_list)):
-    scores_list[n] = int(scores_list[n])
+# scores_list = input("Input a list of student scores ").split(" ")
+# for n in range(0, len(scores_list)):
+#     scores_list[n] = int(scores_list[n])
 
-highest_score = scores_list[0]
+# highest_score = 0
 
-for score in scores_list:
-    if score > highest_score:
-        highest_score = score
+# for score in scores_list:
+#     if score > highest_score:
+#         highest_score = score
 
-print(f"The highest score in the class is {highest_score}")
+# print(f"The highest score in the class is {highest_score}")
+
+# -----------------For loops and the range() function-------------------#
+# Sometimes we may want to work on something which is not a list
+# for number in range(a, b): # Holds a number between a and b and not including b
+#   print(number)
+
+# for number in range(1, 11, 3): # 3 specifies how the step will be
+#     print(number)
+
+#### Exercise: 
+# Adding all the numbers between 1 and 100
+sum = 0
+for number in range (1, 101):
+    sum += number
+
+print(sum)
