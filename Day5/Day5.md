@@ -1,5 +1,5 @@
-# Day 4
+# Day 5
 I am learning "Python Loops" today.
 
 Today I learn't;
-1. 
+1. For Loop
