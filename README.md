@@ -19,3 +19,8 @@ More info [here](Day4/Day4.md)
 ## Day 5
 I am learning "Python Loops" today.
 More info [here](Day5/Day5.md) 
+
+## Day 6
+I am learning "Functions, Code Blocks and While Loops" today.
+More info [here](Day6/Day6.md) 
+
