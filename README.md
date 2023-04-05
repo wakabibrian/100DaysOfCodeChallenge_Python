@@ -15,3 +15,7 @@ More info [here](Day3/Day3.md)
 ## Day 4
 I am learning "Randomisation and Python Lists" today.
 More info [here](Day4/Day4.md) 
+
+## Day 5
+I am learning "Python Loops" today.
+More info [here](Day5/Day5.md) 
