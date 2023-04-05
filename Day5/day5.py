@@ -24,17 +24,34 @@
 # print(average_height)
 
 #### Option 2
-student_heights = input("Input a list of student heights. ").split()
-for n in range(0, len(student_heights)):
-    student_heights[n] = int(student_heights[n])
-print(student_heights)
+# student_heights = input("Input a list of student heights. ").split()
+# for n in range(0, len(student_heights)):
+#     student_heights[n] = int(student_heights[n])
+# print(student_heights)
 
-total_height = 0
-total_students = 0
+# total_height = 0
+# total_students = 0
 
-for height in student_heights:
-    total_height += height
-    total_students += 1
+# for height in student_heights:
+#     total_height += height
+#     total_students += 1
 
-average_height = round(total_height/total_students)
-print(average_height)
+# average_height = round(total_height/total_students)
+# print(average_height)
+
+###### Exercise 2
+# You are going to write a program that calculates the highest score from a List of scores.
+# e.g. student_scores = [78, 65, 89, 86, 55, 91, 64, 89]
+# Dont use max() function
+
+scores_list = input("Input a list of student scores ").split(" ")
+for n in range(0, len(scores_list)):
+    scores_list[n] = int(scores_list[n])
+
+highest_score = scores_list[0]
+
+for score in scores_list:
+    if score > highest_score:
+        highest_score = score
+
+print(f"The highest score in the class is {highest_score}")
