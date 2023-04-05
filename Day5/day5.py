@@ -13,12 +13,26 @@
 # e.g. student_heights = [180, 124, 165, 173, 189, 169, 146]
 # The average height can be calculated by adding all the heights together and dividing by the total number of heights.
 
-student_heights = input("Input a list of student heights: ")
-heights_list = student_heights.split(" ")
+# student_heights = input("Input a list of student heights: ")
+# heights_list = student_heights.split(" ")
+# total_height = 0
+
+# for height in heights_list:
+#     total_height += int(height)
+
+# average_height = total_height/len(heights_list)
+# print(average_height)
+
+#### Option 2
+student_heights = input("Input a list of student heights. ").split()
+for n in range(0, len(student_heights)):
+    student_heights[n] = int(student_heights[n])
+print(student_heights)
+
 total_height = 0
 
-for height in heights_list:
-    total_height += int(height)
+for height in student_heights:
+    total_height += height
 
-average_height = total_height/len(heights_list)
+average_height = round(total_height/len(student_heights))
 print(average_height)
