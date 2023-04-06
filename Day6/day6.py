@@ -1,6 +1,6 @@
 # -----------------Functions-------------------#
 # Functions help our code to perform different functionality.
-# Functions help to bundle code
+# Functions help to package a set of instructions together
 # Built in functions
 # print("Hello")
 # num_char = len("Hello")
