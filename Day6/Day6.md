@@ -6,4 +6,4 @@ Today I learn't;
 2. Indentation
 3. While Loop
 4. Hurdles Exercises - https://reeborg.ca/
-5. Day 6 Project: Escaping the Maze
+5. Day 6 Project: Escaping the Maze.
