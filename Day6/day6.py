@@ -36,3 +36,6 @@
 
 ###### Hurdles Exercises 
 # visit - https://reeborg.ca/
+
+# -----------------Day 6 Project: Escaping the Maze-------------------# 
+# visit - https://reeborg.ca/
