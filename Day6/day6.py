@@ -19,3 +19,6 @@
 # Recommended to use spaces to tabs
 
 # -----------------While Loop-------------------#
+# The loop will coninue going while a particular condition is true
+# while something_is_true:
+#   # Do something repeatedly
