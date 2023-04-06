@@ -22,3 +22,9 @@
 # The loop will coninue going while a particular condition is true
 # while something_is_true:
 #   # Do something repeatedly
+
+# number_of_hudles = 6
+
+# while number_of_hudles > 0:
+#     jump()
+#     number_of_hudles -= 1
