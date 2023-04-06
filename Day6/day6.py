@@ -28,3 +28,8 @@
 # while number_of_hudles > 0:
 #     jump()
 #     number_of_hudles -= 1
+
+# Why choose while over for loop?
+# for loops are good when iterating over something and you need to do something with each thing
+# eg items in a list.
+# while loops are good when you dont care about using an item, just carrying out something many many times until its false
