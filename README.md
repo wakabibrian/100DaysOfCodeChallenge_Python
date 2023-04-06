@@ -24,3 +24,7 @@ More info [here](Day5/Day5.md)
 I am learning "Functions, Code Blocks and While Loops" today.
 More info [here](Day6/Day6.md) 
 
+## Day 7
+I am building "Hangman Project" today.
+More info [here](Day7/Day7.md) 
+
