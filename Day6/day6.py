@@ -33,3 +33,6 @@
 # for loops are good when iterating over something and you need to do something with each thing
 # eg items in a list.
 # while loops are good when you dont care about using an item, just carrying out something many many times until its false
+
+###### Hurdles Exercises 
+# visit - https://reeborg.ca/
