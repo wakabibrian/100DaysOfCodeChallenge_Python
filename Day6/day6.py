@@ -16,3 +16,6 @@
 # -----------------Indentation-------------------#
 # Indentaion in python is of 4 spaces
 # Used when creating blocks of code
+# Recommended to use spaces to tabs
+
+# -----------------While Loop-------------------#
