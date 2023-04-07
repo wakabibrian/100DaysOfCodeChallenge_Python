@@ -6,3 +6,4 @@ Steps in the Project;
 2. Picking a Random word and checking answers
 3. Replacing Blanks with Guesses
 4. Checking if the player has won
+5. Keeping Track of player's lives
