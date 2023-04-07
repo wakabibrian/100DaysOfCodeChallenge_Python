@@ -5,24 +5,33 @@
 
 # -----------------Challenge1: Picking a Random word and checking answers-------------------#
 # -----------------Challenge2: Replacing Blanks with Guesses-------------------#
+# -----------------Challenge3: Checking if the player has won-------------------#
 import random
 
 word_list = ["aardvark", "baboon", "camel"]
 chosen_word = random.choice(word_list)
+word_length = len(chosen_word)
 
 # Testing code
 print(f'Pssst, the solution is {chosen_word}.')
 
+# Create blanks
 display = []
-word_length = len(chosen_word)
-
 for _ in range(word_length):
     display.append("_")
 
-guess = input("Guess a letter: ").lower()
+# TODO-1: - Use a while loop to let the user guess again. 
+# The loop should only stop once the user has guessed all the letters in the chosen_word 
+# and 'display' has no more blanks ("_"). Then you can tell the user they've won.
 
-for position in range(word_length):
-    if chosen_word[position] == guess:
-        display[position] = guess
+while "_" in display:
+    guess = input("Guess a letter: ").lower()
 
-print(display)
+    # Check guessed letter
+    for position in range(word_length):
+        if chosen_word[position] == guess:
+            display[position] = guess
+
+    print(display)
+
+print("You win!")
