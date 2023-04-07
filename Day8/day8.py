@@ -84,11 +84,10 @@ def caesar(user_text, shift_amount, user_direction):
 
     new_text = ""
 
-    if user_direction == "decode":
-        shift_amount = -shift_amount
-
     for letter in user_text:
         position = alphabet.index(letter)
+        if user_direction == "decode":
+            shift_amount *= -1
         new_position = position + shift_amount
         new_text += alphabet[new_position]
 
