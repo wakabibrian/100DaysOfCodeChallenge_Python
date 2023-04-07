@@ -70,35 +70,49 @@
 # prime_checker(number=n)
 
 # -----------------Day 8 Project: Caesar Cipher (Encoding Text)-------------------#
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
-            'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+            'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
-# TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
+
 def encrypt(user_text, user_shift):
     cipher_text = ""
 
     for letter in user_text:
-       char_position = alphabet.index(letter)
-       shift = char_position + user_shift
-       cipher_text += alphabet[shift]
+        position = alphabet.index(letter)
+        new_position = position + user_shift
+        cipher_text += alphabet[new_position]
 
     print(f"The encoded text is {cipher_text}")
 
-# TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.
-# e.g.
-# plain_text = "hello"
-# shift = 5
-# cipher_text = "mjqqt"
-# print output: "The encoded text is mjqqt"
+# TODO-1: Create a different function called 'decrypt' that takes the 'text' and 'shift' as inputs.
+def decrypt(encr_text, shift_amount):
+    plain_text = ""
 
-# HINT: How do you get the index of an item in a list:
-# https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
+    for letter in encr_text:
+        position = alphabet.index(letter)
+        new_position = position - shift_amount
+        plain_text += alphabet[new_position]
 
-# 🐛Bug alert: What happens if you try to encode the word 'civilization'?🐛
+    print(f"The decoded text is {plain_text}")
 
-# TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message.
-encrypt(user_text=text, user_shift=shift)
+  # TODO-2: Inside the 'decrypt' function, shift each letter of the 'text' *backwards* in the alphabet by 
+  # the shift amount and print the decrypted text.
+  # e.g.
+  # cipher_text = "mjqqt"
+  # shift = 5
+  # plain_text = "hello"
+  # print output: "The decoded text is hello"
+
+
+# TODO-3: Check if the user wanted to encrypt or decrypt the message by checking the 'direction' variable. 
+# Then call the correct function based on that 'drection' variable. 
+# You should be able to test the code to encrypt *AND* decrypt a message.
+
+if direction == "encode":
+    encrypt(user_text=text, user_shift=shift)
+elif direction == "decode":
+    decrypt(encr_text=text, shift_amount=shift)
