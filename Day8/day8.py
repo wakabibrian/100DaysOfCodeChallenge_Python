@@ -1,6 +1,6 @@
 # -----------------Functions With inputs-------------------#
-# Review: 
-# Create a function called greet(). 
+# Review:
+# Create a function called greet().
 # Write 3 print statements inside the function.
 # Call the greet() function and run your code.
 # def greet():
@@ -12,8 +12,8 @@
 
 # Variable names inside () gives funtions inputs
 # def greet_with_name(name):
-#     print(f"Hello {name}") 
-#     print(f"How do you do {name}?") 
+#     print(f"Hello {name}")
+#     print(f"How do you do {name}?")
 
 # greet_with_name("Brian")
 
@@ -32,18 +32,41 @@
 
 # greet_with_name(location="Kampala", name="Wakabi")
 
-##### Exercise: Paint Area Calculator
-# You are painting a wall. The instructions on the paint can says that 1 can of paint can cover 5 square meters of wall. 
+# Exercise: Paint Area Calculator
+# You are painting a wall. The instructions on the paint can says that 1 can of paint can cover 5 square meters of wall.
 # Given a random height and width of wall, calculate how many cans of paint you'll need to buy.
 # number of cans = (wall height x wall width) ÷ coverage per can.
-import math
+# import math
 
-def paint_calc(height, width, cover):
-    numer_of_cans = math.ceil((height * width) / cover)
-    print(f"You'll need {numer_of_cans} cans of paint.")
+# def paint_calc(height, width, cover):
+#     numer_of_cans = math.ceil((height * width) / cover)
+#     print(f"You'll need {numer_of_cans} cans of paint.")
 
-test_h = int(input("Height of wall: "))
-test_w = int(input("Width of wall: "))
-coverage = 5
+# test_h = int(input("Height of wall: "))
+# test_w = int(input("Width of wall: "))
+# coverage = 5
 
-paint_calc(width=test_w, height=test_h, cover=coverage)
+# paint_calc(width=test_w, height=test_h, cover=coverage)
+
+# Exercise: Prime  Number Checker
+# A prime number is a number that is only divisible by 1 and its self
+# You need to write a function that checks whether if the number passed into it is a prime number or not.
+
+# def prime_checker(number):
+
+#     is_prime = True
+
+#     for i in range(2, number):
+#         if number % i == 0:
+#             is_prime = False
+    
+#     if is_prime:
+#         print("It's a prime number")
+#     else:
+#         print("It's a not prime number")
+
+
+# n = int(input("Check this number: "))
+# prime_checker(number=n)
+
+# -----------------Day 8 Project: Caesar Cipher (Encoding Text)-------------------#
