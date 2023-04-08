@@ -29,6 +29,11 @@ I am building "Hangman Project" today.
 More info [here](Day7/Day7.md) 
 
 ## Day 8
-I am building "Functions With Imputs" today.
+I am learning "Functions With Imputs" today.
 More info [here](Day8/day8.md) 
+
+## Day 9
+I am learning "Dictionaries" today.
+More info [here](Day8/day8.md) 
+
 
