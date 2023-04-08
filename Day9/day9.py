@@ -114,41 +114,76 @@
 # print(travel_log)
 
 # -----------------Day 9 Project: Secret Auction-------------------#
-from art import logo
-print("Welcome to the secret auction program.")
+# from art import logo
+# print("Welcome to the secret auction program.")
 
+# print(logo)
+
+# bidders = []
+
+# end_bid = False
+
+# while not end_bid:
+#     name = input("What is your name?: ")
+#     bid = int(input("What's your bid?: $"))
+
+#     bidder = {}
+#     bidder[name] = bid
+#     bidders.append(bidder)
+
+#     to_continue = input("Are there any other bidders? Type 'yes' or 'no'.\n")
+
+#     if to_continue == "yes":
+#         import os
+#         def clear(): return os.system("clear")
+#         clear()
+#     else:
+#         end_bid = True
+
+# highest_bid = 0
+# highest_bidder = ""
+
+# for name in bidders:
+
+#     for bidder in name:
+#         if name[bidder] > highest_bid:
+#             highest_bid = name[bidder]
+#             highest_bidder += bidder
+
+# print(f"The winner is {highest_bidder} with a bid of ${highest_bid}")
+
+##### Option 2
+from art import logo
 print(logo)
 
-bidders = []
-
+bids = {}
 end_bid = False
+
+def find_highest_bidder(bidding_record):
+    
+    highest_bid = 0
+    highest_bidder = ""
+
+    for bidder in bidding_record:
+        if bidding_record[bidder] > highest_bid:
+            highest_bid = bidding_record[bidder]
+            highest_bidder = bidder
+    
+    print(f"The winner is {highest_bidder} with a bid of ${highest_bid}")
+
 
 while not end_bid:
     name = input("What is your name?: ")
     bid = int(input("What's your bid?: $"))
 
-    bidder = {}
-    bidder[name] = bid
-    bidders.append(bidder)
+    bids[name] = bid
 
-    to_continue = input("Are there any other bidders? Type 'yes' or 'no'.\n")
+    to_continue = input("Are there any other bidders? Type 'yes' or 'no'.\n").lower()
 
     if to_continue == "yes":
         import os
         def clear(): return os.system("clear")
         clear()
-    else:
+    elif to_continue == "no":
+        find_highest_bidder(bids)
         end_bid = True
-
-highest_bid = 0
-highest_bidder = ""
-
-for name in bidders:
-
-    for bidder in name:
-        if name[bidder] > highest_bid:
-            highest_bid = name[bidder]
-            highest_bidder += bidder
-
-print(f"The winner is {highest_bidder} with a bid of ${highest_bid}")
-
