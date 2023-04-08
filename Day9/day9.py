@@ -3,10 +3,10 @@
 # Dictionaries have a key and value
 # {key: value}
 
-programming_dictionary = {
-    "Bug": "An error in a program that prevents the program from running as expected.",
-    "Function": "A piece of code that you can easily call over and over again.",
-}
+# programming_dictionary = {
+#     "Bug": "An error in a program that prevents the program from running as expected.",
+#     "Function": "A piece of code that you can easily call over and over again.",
+# }
 
 # Retrieving items from a dictionary
 # print(programming_dictionary["Bug"])
@@ -40,28 +40,46 @@ programming_dictionary = {
 # Scores 71 - 80: Grade = "Acceptable"
 # Scores 70 or lower: Grade = "Fail"
 
-student_scores = {
-    "Harry": 81,
-    "Ron": 78,
-    "Hermione": 99,
-    "Draco": 74,
-    "Neville": 62,
-}
+# student_scores = {
+#     "Harry": 81,
+#     "Ron": 78,
+#     "Hermione": 99,
+#     "Draco": 74,
+#     "Neville": 62,
+# }
 
-student_grades = {}
+# student_grades = {}
 
-for student in student_scores:
-    
-    score = student_scores[student]
+# for student in student_scores:
 
-    if score >= 91:
-        student_grades[student] = "Outstanding"
-    elif score >= 81:
-       student_grades[student] = "Exceeds Expectations"
-    elif score >= 71:
-        student_grades[student] = "Acceptable"
-    else:
-        student_grades[student] = "Fail"
+#     score = student_scores[student]
 
+#     if score >= 91:
+#         student_grades[student] = "Outstanding"
+#     elif score >= 81:
+#        student_grades[student] = "Exceeds Expectations"
+#     elif score >= 71:
+#         student_grades[student] = "Acceptable"
+#     else:
+#         student_grades[student] = "Fail"
 
-print(student_grades)
+# print(student_grades)
+
+# -----------------Nesting Lists and Dictionaries-------------------#
+# {
+#     key: [list],
+#     key2: {dict},
+# }
+
+travel_log = [
+    {
+        "country": "France",
+        "cities_visited": ["Paris", "Lille", "Dijon"],
+        "total_visits": 12
+    },
+    {
+        "country": "Germany",
+        "cities_visited": ["Berlin", "Hmburg", "Stuttgart"],
+        "total_visits": 5
+    }
+]
