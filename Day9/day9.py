@@ -151,3 +151,4 @@ for name in bidders:
             highest_bidder += bidder
 
 print(f"The winner is {highest_bidder} with a bid of ${highest_bid}")
+
