@@ -30,10 +30,14 @@ More info [here](Day7/Day7.md)
 
 ## Day 8
 I am learning "Functions With Imputs" today.
-More info [here](Day8/day8.md) 
+More info [here](Day8/Day8.md) 
 
 ## Day 9
 I am learning "Dictionaries" today.
-More info [here](Day8/day8.md) 
+More info [here](Day9/Day9.md) 
+
+## Day 10
+I am learning "Functions With Outputs" today.
+More info [here](Day10/Day10.md) 
 
 
