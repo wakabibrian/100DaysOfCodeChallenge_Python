@@ -71,15 +71,45 @@
 #     key2: {dict},
 # }
 
+# travel_log = [
+#     {
+#         "country": "France",
+#         "cities_visited": ["Paris", "Lille", "Dijon"],
+#         "total_visits": 12
+#     },
+#     {
+#         "country": "Germany",
+#         "cities_visited": ["Berlin", "Hmburg", "Stuttgart"],
+#         "total_visits": 5
+#     }
+# ]
+
+# Exercise 2 - Dictionary in List
+# You are going to write a program that adds to a travel_log.
+# You can see a travel_log which is a List that contains 2 Dictionaries.
+# Write a function that will work with the following line of code on line 21 to add the entry for Russia to the travel_log.
 travel_log = [
     {
         "country": "France",
+        "total_visits": 12,
         "cities_visited": ["Paris", "Lille", "Dijon"],
-        "total_visits": 12
     },
     {
         "country": "Germany",
+        "total_visits": 5,
         "cities_visited": ["Berlin", "Hmburg", "Stuttgart"],
-        "total_visits": 5
     }
 ]
+
+def add_new_country(country_visited, no_of_visities, cities):
+    new_country = {}
+    new_country["coutry"] = country_visited
+    new_country["total_visits"] = no_of_visities
+    new_country["cities_visited"] = cities
+
+    travel_log.append(new_country)
+
+
+
+add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
+print(travel_log)
