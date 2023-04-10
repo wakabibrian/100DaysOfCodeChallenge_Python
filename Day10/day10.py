@@ -92,6 +92,8 @@
 # print(formated_name)
 
 # -----------------Day 10 Project: Calculator-------------------#
+from art import logo
+
 def add(n1, n2):
     return n1 + n2
 
@@ -116,7 +118,8 @@ operations = {
 }
 
 def calculator():
-    num1 = int(input("What's the first number?: "))
+    print(logo)
+    num1 = float(input("What's the first number?: "))
 
     for symbol in operations:
         print(symbol)
@@ -125,7 +128,7 @@ def calculator():
 
     while to_continue:
         operation_symbol = input("Pick an operation: ")
-        num2 = int(input("What's the next number?: "))
+        num2 = float(input("What's the next number?: "))
 
         calculation_function = operations[operation_symbol]
         answer = calculation_function(num1, num2)
