@@ -115,22 +115,28 @@ operations = {
     "/": divide,
 }
 
-num1 = int(input("What's the first number?: "))
+def calculator():
+    num1 = int(input("What's the first number?: "))
 
-for symbol in operations:
-    print(symbol)
+    for symbol in operations:
+        print(symbol)
 
-operation_symbol = input("Pick an operation from the line above: ")
-num2 = int(input("What's the second number?: "))
+    to_continue = True
 
-calculation_function = operations[operation_symbol]
-first_answer = calculation_function(num1, num2)
+    while to_continue:
+        operation_symbol = input("Pick an operation: ")
+        num2 = int(input("What's the next number?: "))
 
-print(f"{num1} {operation_symbol} {num2} = {first_answer}")
+        calculation_function = operations[operation_symbol]
+        answer = calculation_function(num1, num2)
 
-operation_symbol = input("Pick another operation: ")
-num3 = int(input("What's the next number: "))
-calculation_function = operations[operation_symbol]
-second_answer = calculation_function(first_answer, num3)
+        print(f"{num1} {operation_symbol} {num2} = {answer}")
 
-print(f"{first_answer} {operation_symbol} {num3} = {second_answer}")
+        if input(f"Type 'y' to continue to continue calculating with {answer}, or type 'n' to start a new calculation:  ") == "y":
+            num1 = answer
+        else:
+            to_continue = False
+            # Recursion - A function calls its self
+            calculator()
+
+calculator()

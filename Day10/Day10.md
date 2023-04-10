@@ -6,3 +6,5 @@ Today I learn't;
 2. Multiple return values
 3. Docstrings
 4. Day 10 Project: Calculator
+5. Print vs Return
+6. Recursion
