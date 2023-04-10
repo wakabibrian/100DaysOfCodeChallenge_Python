@@ -21,7 +21,7 @@
 # def format_name(f_name, l_name):
 #     if f_name == "" or l_name == "":
 #         return "You didn't provide valid inputs"
-    
+
 #     first_name = f_name.title()
 #     last_name = l_name.title()
 #     return f"{first_name} {last_name}"
@@ -29,8 +29,8 @@
 # formated_name = format_name(input("Enter first name: "), input("Enter first name: "))
 # print(formated_name)
 
-#### Exercise: Days in a month
-# In the starting code, you'll find the solution from the Leap Year challenge. 
+# Exercise: Days in a month
+# In the starting code, you'll find the solution from the Leap Year challenge.
 # First, convert this function is_leap() so that instead of printing "Leap year." or "Not leap year."
 # it should return True if it is a leap year and return False if it is not a leap year.
 
@@ -40,7 +40,7 @@
 # And it will use this information to work out the number of days in the month, then return that as the output, e.g.:
 # 28
 
-# The List month_days contains the number of days in a month from January to December for a non-leap year. 
+# The List month_days contains the number of days in a month from January to December for a non-leap year.
 # A leap year has 29 days in February.
 
 # def is_leap(year):
@@ -49,7 +49,7 @@
 #             if year % 400 == 0:
 #                 return True
 #             else:
-#                return False 
+#                return False
 #         else:
 #             return True
 #     else:
@@ -66,7 +66,7 @@
 #     else:
 #         return month_days[month-1]
 
-# #🚨 Do NOT change any of the code below 
+# #🚨 Do NOT change any of the code below
 # year = int(input("Enter a year: "))
 # month = int(input("Enter a month: "))
 # days = days_in_month(year, month)
@@ -78,16 +78,52 @@
 # Docstrings has to go as the first line after the declaration
 # You use 3 quotation marks
 
-def format_name(f_name, l_name):
-    """ Takes a first and last name and fomart it to return the title case version of the name"""
+# def format_name(f_name, l_name):
+#     """ Takes a first and last name and fomart it to return the title case version of the name"""
 
-    if f_name == "" or l_name == "":
-        return "You didn't provide valid inputs"
-    
-    first_name = f_name.title()
-    last_name = l_name.title()
-    return f"{first_name} {last_name}"
+#     if f_name == "" or l_name == "":
+#         return "You didn't provide valid inputs"
 
-formated_name = format_name(input("Enter first name: "), input("Enter first name: "))
-print(formated_name)
+#     first_name = f_name.title()
+#     last_name = l_name.title()
+#     return f"{first_name} {last_name}"
 
+# formated_name = format_name(input("Enter first name: "), input("Enter first name: "))
+# print(formated_name)
+
+# -----------------Day 10 Project: Calculator-------------------#
+def add(n1, n2):
+    return n1 + n2
+
+
+def subtract(n1, n2):
+    return n1 - n2
+
+
+def multiply(n1, n2):
+    return n1 * n2
+
+
+def divide(n1, n2):
+    return n1 / n2
+
+
+operations = {
+    "+": add,
+    "-": subtract,
+    "*": multiply,
+    "/": divide,
+}
+
+num1 = int(input("What's the first number?: "))
+
+for symbol in operations:
+    print(symbol)
+
+operation_symbol = input("Pick an operation from the line above: ")
+num2 = int(input("What's the second number?: "))
+
+calculation_function = operations[operation_symbol]
+answer = calculation_function(num1, num2)
+
+print(f"{num1} {operation_symbol} {num2} = {answer}")
