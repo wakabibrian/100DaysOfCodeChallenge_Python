@@ -41,7 +41,7 @@ I am learning "Functions With Outputs" today.
 More info [here](Day10/Day10.md) 
 
 ## Day 11
-I am building "Blackjack Project" today.
+I am building "Blackjack Project." today.
 More info [here](Day11/Day11.md) 
 
 
