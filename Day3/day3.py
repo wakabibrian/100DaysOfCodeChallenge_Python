@@ -246,3 +246,4 @@ if challenge1 == "left":
         print("You get attacked by an angry trout. Game Over.")
 else:
     print("You fell into a hole. Game Over.")
+    
