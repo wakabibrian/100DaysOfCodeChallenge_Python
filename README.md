@@ -44,4 +44,8 @@ More info [here](Day10/Day10.md)
 I am building "Blackjack Project." today.
 More info [here](Day11/Day11.md) 
 
+## Day 12
+I am learning "Scope" and building "Number Guessing Game" today.
+More info [here](Day12/Day12.md)  
+
 
