@@ -35,23 +35,22 @@
 # 11 is the Ace.
 import random
 
-cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
-
-def deal_card(card_list):
+def deal_card():
     """Takes a list of card values and returns a random card value"""
-    return random.choice(card_list)
+    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+    card = random.choice(cards)
+    return card
 
 
 # Hint 5: Deal the user and computer 2 cards each using deal_card() and append().
 user_cards = []
 computer_cards = []
 
-for i in range(2):
-    user_cards.append(deal_card(cards))
+for _ in range(2):
+    user_cards.append(deal_card())
+    computer_cards.append(deal_card())
 
-for i in range(2):
-    computer_cards.append(deal_card(cards))
 
 # Hint 6: Create a function called calculate_score() that takes a List of cards as input
 # and returns the score.
@@ -127,6 +126,7 @@ def black_jack():
                 print("User wins")
 
     compare(user_score, computer_score)
+
 
 black_jack()
 
