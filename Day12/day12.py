@@ -65,10 +65,17 @@
 # Always avoid modifying global variables, they are prune to errors
 
 # Better way of using it, use the return concept.
-enemies = 1
-def increase_enemies():
-    return enemies + 1
+# enemies = 1
+# def increase_enemies():
+#     return enemies + 1
 
-enemies = increase_enemies()
-print(enemies)
+# enemies = increase_enemies()
+# print(enemies)
+
+# -----------------Python constants and Global Scope-------------------#
+# Global scopes can be useful especial when defining constants
+# Global constants are variables defined and never planning on changing them
+# PI = 3.143434 # Always use upper care by convension
+# URL = "https:/google.com"
+# TWITTER_HANDLE = "@wakabibrian"
 
