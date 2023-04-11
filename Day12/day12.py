@@ -31,10 +31,21 @@
 
 # -----------------Does Python have Blockscope?-------------------#
 # There is no block  scope in Python
-game_level = 3
-enemies = ["skeleton", "zombie", "alien"]
+# game_level = 3
+# enemies = ["skeleton", "zombie", "alien"]
 
-if game_level < 5:
-    enemies = enemies[0]
+# if game_level < 5:
+#     new_enemies = enemies[0]
 
-print(enemies)
+# print(new_enemies) # Valid
+
+# game_level = 3
+# def create_enemy():
+#     enemies = ["Skeleton", "Zombie", "Alien"]
+
+#     if game_level < 5:
+#         new_enemies = enemies[0]
+
+# print(new_enemies) # Invalid
+
+# Scopes are only counted in functions
