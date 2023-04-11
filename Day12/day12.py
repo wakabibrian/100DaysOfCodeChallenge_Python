@@ -49,3 +49,26 @@
 # print(new_enemies) # Invalid
 
 # Scopes are only counted in functions
+
+# -----------------How to modify variables with Global Scope-------------------#
+# enemies = 1
+
+# def increase_enemies():
+#     global enemies
+# #   enemies = 2 # This is a new variable, different from the global variable
+#     enemies += 1 # Brings an error because you want to modify a variable which is not defined locally (to modify, use the global keyword)
+#     print(f"enemies inside function: {enemies}")
+
+# increase_enemies()
+# print(f"enemies outside function: {enemies}")
+
+# Always avoid modifying global variables, they are prune to errors
+
+# Better way of using it, use the return concept.
+enemies = 1
+def increase_enemies():
+    return enemies + 1
+
+enemies = increase_enemies()
+print(enemies)
+
