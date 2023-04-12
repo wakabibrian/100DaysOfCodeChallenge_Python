@@ -48,4 +48,9 @@ More info [here](Day11/Day11.md)
 I am learning "Scope" and building "Number Guessing Game" today.
 More info [here](Day12/Day12.md)  
 
+## Day 13
+I am learning "Debugging" today.
+More info [here](Day13/Day13.md)  
+
+
 
