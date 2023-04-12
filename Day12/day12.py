@@ -80,4 +80,46 @@
 # TWITTER_HANDLE = "@wakabibrian"
 
 # -----------------Day 12 Project: Number Guessing Game-------------------#
+import random
+from art import logo
 
+print(logo)
+print("Welcome to the Number Guessing Game!")
+print("I'm thinking of a number between 1 and 100.")
+answer = random.randint(1, 100)
+print(f"Pssst, the correct answer is {answer}")
+attempts = 0
+game_ended = False
+
+level = input("Choose a difficulty. Type 'easy' or 'hard': ")
+
+if level == "easy":
+    attempts = 10
+elif level == "hard":
+    attempts = 5
+
+def guess_number():
+    print(f"You have {attempts} attempts remaining to guess the number")
+    return int(input("Make a guess: "))
+
+def print_message(message):
+    global attempts
+    print(message)
+    attempts -= 1
+
+while not game_ended:
+    guess = guess_number()
+
+    if attempts > 0:
+
+        if guess > answer:
+            print_message("Too high")
+        elif guess < answer:
+            print_message("Too low")
+        else:
+            print(f"You got it! The answer was {guess}.")
+            game_ended = True
+
+    if attempts == 0:
+        print("You've run out of guesses, you lose.")
+        game_ended = True
