@@ -50,3 +50,9 @@
 #   print(b_list)
 
 # mutate([1,2,3,5,8,13])
+
+# -----------------More Tips-------------------#
+# Take a break
+# Ask a friend
+# Run often
+# Use stackoverflow
