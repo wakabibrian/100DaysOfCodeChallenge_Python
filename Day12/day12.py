@@ -83,6 +83,10 @@
 import random
 from art import logo
 
+EASY_LEVEL_TURNS = 10
+HARD_LEVEL_TURNS = 5
+game_ended = False
+
 
 def guess_number():
     """Takes no inputs and returns a guessed number by the use"""
@@ -90,11 +94,17 @@ def guess_number():
     return int(input("Make a guess: "))
 
 
-def result_message(message):
-    """Takes a message as input, reduces the number of attempts and returns a message for high or low"""
-    global attempts
-    attempts -= 1
-    return message
+def result_message(message, attempts):
+    """Takes message and attempts as inputs, prints message and returns attempts minus 1"""
+    print(message)
+    return attempts - 1
+
+
+def level_turns():
+    if level == "easy":
+        return EASY_LEVEL_TURNS
+    elif level == "hard":
+        return HARD_LEVEL_TURNS
 
 
 print(logo)
@@ -102,15 +112,10 @@ print("Welcome to the Number Guessing Game!")
 print("I'm thinking of a number between 1 and 100.")
 answer = random.randint(1, 100)
 print(f"Pssst, the correct answer is {answer}")
-attempts = 0
-game_ended = False
 
 level = input("Choose a difficulty. Type 'easy' or 'hard': ")
 
-if level == "easy":
-    attempts = 10
-elif level == "hard":
-    attempts = 5
+attempts = level_turns()
 
 while not game_ended:
     guess = guess_number()
@@ -118,9 +123,9 @@ while not game_ended:
     if attempts > 0:
 
         if guess > answer:
-            print(result_message("Too high"))
+            attempts = result_message("Too high", attempts)
         elif guess < answer:
-            print(result_message("Too low"))
+            attempts = result_message("Too low", attempts)
         else:
             print(f"You got it! The answer was {guess}.")
             game_ended = True
