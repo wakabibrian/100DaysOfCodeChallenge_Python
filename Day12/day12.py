@@ -99,13 +99,15 @@ elif level == "hard":
     attempts = 5
 
 def guess_number():
+    """Takes no inputs and returns a guessed number by the use"""
     print(f"You have {attempts} attempts remaining to guess the number")
     return int(input("Make a guess: "))
 
-def print_message(message):
+def result_message(message):
+    """Takes a message as input, reduces the number of attempts and returns a message for high or low"""
     global attempts
-    print(message)
     attempts -= 1
+    return message
 
 while not game_ended:
     guess = guess_number()
@@ -113,9 +115,9 @@ while not game_ended:
     if attempts > 0:
 
         if guess > answer:
-            print_message("Too high")
+            print(result_message("Too high"))
         elif guess < answer:
-            print_message("Too low")
+            print(result_message("Too low"))
         else:
             print(f"You got it! The answer was {guess}.")
             game_ended = True
