@@ -52,5 +52,9 @@ More info [here](Day12/Day12.md)
 I am learning "Debugging" today.
 More info [here](Day13/Day13.md)  
 
+## Day 14
+I am building a "Higher Lower Game Project" today.
+More info [here](Day14/Day14.md) 
+
 
 
