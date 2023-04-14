@@ -52,9 +52,26 @@ def report():
 ##          not continue to make the drink but print: “ Sorry there is not enough water. ”
 ##      c. The same should happen if another resource is depleted, e.g. milk or coffee.
 def check_resources(user_input, resources):
+    """Takes user_requests and returns True if resources are enough"""
+    espresso_water = MENU["espresso"]["ingredients"]["water"]
+    espresso_coffee = MENU["espresso"]["ingredients"]["coffee"]
 
-    if user_input == "latte":
-        if resources["water"] >= 
+    latte_water = MENU["latte"]["ingredients"]["water"]
+    latte_milk = MENU["latte"]["ingredients"]["milk"]
+    latte_coffee = MENU["latte"]["ingredients"]["coffee"]
+
+    cappuccino_water = MENU["cappuccino"]["ingredients"]["water"]
+    cappuccino_milk = MENU["cappuccino"]["ingredients"]["milk"]
+    cappuccino_coffee = MENU["cappuccino"]["ingredients"]["coffee"]
+
+    if user_input == "espresso":
+        return resources["water"] >= espresso_water and resources["coffee"] >= espresso_coffee
+         
+    elif user_input == "latte":
+        return resources["water"] >= latte_water and resources["milk"] >= latte_milk and resources["coffee"] >= latte_coffee
+    
+    elif user_input == "cappuccino":
+        return resources["water"] >= cappuccino_water and resources["milk"] >= cappuccino_milk and resources["coffee"] >= cappuccino_coffee
 
 
 # 1. Prompt user by asking “ What would you like? (espresso/latte/cappuccino): ”
@@ -65,6 +82,8 @@ user_request = input("  What would you like? (espresso/latte/cappuccino): ").low
 
 if user_request == "report":
     report()
+elif user_request == "espresso" or user_request == "latte" or user_request == "cappuccino":
+    print(check_resources(user_request, resources))
 
 # 2. Turn off the Coffee Machine by entering “ off ” to the prompt.
 ##       a. For maintainers of the coffee machine, they can use “off” as the secret word to turn off
