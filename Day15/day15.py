@@ -89,31 +89,21 @@ def total_coins(resources_availability):
         nickle = float(input("how many nickles?: "))
         pennie = float(input("how many pennies?: "))
         return (quarter*0.25) + (dime*0.10) + (nickle*0.05) + (pennie*0.01)
-    
 
-while should_continue:
-    # 1. Prompt user by asking “ What would you like? (espresso/latte/cappuccino): ”
-    ##       a. Check the user’s input to decide what to do next.
-    ##       b. The prompt should show every time action has completed, e.g. once the drink is
-    ##          dispensed. The prompt should show again to serve the next customer.
-    user_request = input("  What would you like? (espresso/latte/cappuccino): ").lower()
-
-    if user_request == "report":
-        report()
-    elif user_request == "espresso" or user_request == "latte" or user_request == "cappuccino":
-        print(check_resources(user_request, resources))
-    # 2. Turn off the Coffee Machine by entering “ off ” to the prompt.
-    ##       a. For maintainers of the coffee machine, they can use “off” as the secret word to turn off
-    ##       the machine. Your code should end execution when this happens.
-    elif user_request == "off":
-        should_continue = False
-
-
-
-# Check transaction successful?
+# 6. Check transaction successful?
+def transaction_success(amount_inserted, drink):
 ##      a. Check that the user has inserted enough money to purchase the drink they selected.
 ##      E.g Latte cost $2.50, but they only inserted $0.52 then after counting the coins the
 ##          program should say “ Sorry that's not enough money. Money refunded. ”.
+    drink_cost = MENU[drink]["cost"]
+
+    if amount_inserted == drink_cost:
+        return money + amount_inserted
+    elif amount_inserted > drink_cost:
+        return f"Here is ${round(amount_inserted - drink_cost, 2)} dollars in change."
+    else:
+        return "Sorry that's not enough money. Money refunded."
+
 ##      b. But if the user has inserted enough money, then the cost of the drink gets added to the
 ##          machine as the profit and this will be reflected the next time “report” is triggered. E.g.
 ##          Water: 100ml
@@ -123,6 +113,34 @@ while should_continue:
 ##      c. If the user has inserted too much money, the machine should offer change.
 ##          E.g. “Here is $2.45 dollars in change.” The change should be rounded to 2 decimal
 ##          places.
+
+
+
+while should_continue:
+    
+    # 1. Prompt user by asking “ What would you like? (espresso/latte/cappuccino): ”
+    ##       a. Check the user’s input to decide what to do next.
+    ##       b. The prompt should show every time action has completed, e.g. once the drink is
+    ##          dispensed. The prompt should show again to serve the next customer.
+    user_request = input("  What would you like? (espresso/latte/cappuccino): ").lower()
+
+    if user_request == "report":
+        report()
+    elif user_request == "espresso" or user_request == "latte" or user_request == "cappuccino":
+        availability = check_resources(user_request, resources)
+        amount = total_coins(availability)
+        print(amount)
+        money = transaction_success(amount, user_request)
+        print(money)
+        
+        
+    # 2. Turn off the Coffee Machine by entering “ off ” to the prompt.
+    ##       a. For maintainers of the coffee machine, they can use “off” as the secret word to turn off
+    ##       the machine. Your code should end execution when this happens.
+    elif user_request == "off":
+        should_continue = False
+    
+
 
 # Make Coffee.
 ##       a. If the transaction is successful and there are enough resources to make the drink the
