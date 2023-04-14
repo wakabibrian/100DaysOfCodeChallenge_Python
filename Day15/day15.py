@@ -74,12 +74,22 @@ def check_resources(user_input, resources):
     elif user_input == "cappuccino":
         return resources["water"] >= cappuccino_water and resources["milk"] >= cappuccino_milk and resources["coffee"] >= cappuccino_coffee
 
-# Process coins.
+# 5. Process coins.
 ##      a. If there are sufficient resources to make the drink selected, then the program should
 ##          prompt the user to insert coins.
 ##      b. Remember that quarters = $0.25, dimes = $0.10, nickles = $0.05, pennies = $0.01
 ##      c. Calculate the monetary value of the coins inserted. E.g. 1 quarter, 2 dimes, 1 nickel, 2
 ##          pennies = 0.25 + 0.1 x 2 + 0.05 + 0.01 x 2 = $0.52
+def total_coins(resources_availability):
+    """Checks if availability of resources is True, calculates total coins inserted"""
+    if resources_availability == True:
+        print("Please insert coins.")
+        quarter = float(input("how many quarters?: "))
+        dime = float(input("how many dimes?: "))
+        nickle = float(input("how many nickles?: "))
+        pennie = float(input("how many pennies?: "))
+        return (quarter*0.25) + (dime*0.10) + (nickle*0.05) + (pennie*0.01)
+    
 
 while should_continue:
     # 1. Prompt user by asking “ What would you like? (espresso/latte/cappuccino): ”
