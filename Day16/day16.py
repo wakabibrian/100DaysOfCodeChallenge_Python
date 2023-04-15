@@ -23,18 +23,25 @@
 # car = CarBluePrint(), 
 # car - object created from a CarBluePrint() class
 
-from turtle import Turtle, Screen
+# from turtle import Turtle, Screen
 
-# creating an object
-timmy = Turtle()
-timmy.shape("turtle")
-timmy.color("red")
-timmy.forward(100)
+# # creating an object
+# timmy = Turtle()
+# timmy.shape("turtle")
+# timmy.color("red")
+# timmy.forward(100)
 
-my_screen = Screen()
+# my_screen = Screen()
 
-# object attributes, what the my_screen object has
-print(my_screen.canvheight) # Accessing the attribute
+# # object attributes, what the my_screen object has
+# print(my_screen.canvheight) # Accessing the attribute
 
-# object methods, what the my_screen object does
-my_screen.exitonclick()
+# # object methods, what the my_screen object does
+# my_screen.exitonclick()
+
+# -----------------How to Add Python Packages and use PyPi-------------------#
+# Packages: Using code that other developers have written
+# Package differs from module because it is a whole bunch of code that other developers have written 
+# PyPi - Python Package Index
+# Inorder to use packages found from the Python Package Index, you have to install them
+import prettytable
