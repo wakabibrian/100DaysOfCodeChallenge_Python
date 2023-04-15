@@ -8,3 +8,11 @@
 # Each pieces become reusable if we need the same functionality in the future
 
 # -----------------How to use OOP: Objects andc Classes-------------------#
+# In OOP, we are trying to model real life objects
+# When modeling objects, we think of what it has and what it does
+# What it has - attributes (variables).
+# What it does - methods (functions).
+# It's called a  method because it is a function that a particular modelled object can do
+#### We can have multiple objects generated from the same type: from the same blue print.
+# In OOP, a blue of an object is called a class
+# Objects are generated from a blue print called class
