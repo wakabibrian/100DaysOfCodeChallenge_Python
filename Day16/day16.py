@@ -44,4 +44,9 @@
 # Package differs from module because it is a whole bunch of code that other developers have written 
 # PyPi - Python Package Index
 # Inorder to use packages found from the Python Package Index, you have to install them
-import prettytable
+# import prettytable
+
+# -----------------Building the Coffee Machine in OOP-------------------#
+from menu import Menu, MenuItem
+from coffee_maker import CoffeeMaker
+from money_machine import MoneyMachine
