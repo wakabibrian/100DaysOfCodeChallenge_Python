@@ -1,7 +1,7 @@
 # -----------------How to create own classes-------------------#
 # Remember - A class is a blue print for creating an object
 # Syntax
-# class User: 
+# class User:
 #     pass
 # # The name of the class should have the first name of each letter capitalised (PascalCase)
 # # PascalCase - classes, snake_case for other things
@@ -17,7 +17,7 @@
 # print(user_1.name)
 
 # Creating attributes using a connstructor: Better way
-# Constructor specifies what should happen when the object is created: initializing an object 
+# Constructor specifies what should happen when the object is created: initializing an object
 # When an object is created, we can set variables to their starting values
 # In python, to create a constructor we use the __init__ function
 # __init__ function is used to initialise the attributes
@@ -36,13 +36,12 @@
 #         self.username = username
 #         self.followers = 0
 #         self.following = 0
-    
+
 #     def follow(self, user):
 #         # A method should always have a self parameter as the first parameter: whenever it is called, it knows the object that called it.
 #         user.followers += 1
 #         self.following += 1
 #         #object.attribute
-        
 
 
 # # The __init__ fununction will always be called everytime you will create a new objects
@@ -70,4 +69,6 @@ for question in question_data:
     question_bank.append(new_question)
 
 quiz = QuizBrain(question_bank)
-quiz.next_question()
+
+while quiz.still_has_questions():
+    quiz.next_question()
