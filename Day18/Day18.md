@@ -1,5 +1,5 @@
 # Day 18
-Today, I am learning "Turtle Graphics, Tuples, and Importing Modules"
+Today, I am learning "Turtle Graphics (Turtle Module), Tuples, and Importing Modules"
 
 Today I learn't;
-1. 
+1. Understanding Turtle Graphics and How to use the Documentation
