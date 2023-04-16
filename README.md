@@ -64,4 +64,7 @@ More info [here](Day15/Day15.md)
 I am learning "OOP" today.
 More info [here](Day16/Day16.md)
 
+## Day 17
+Today, I am learning "creating classes" and building "Quiz Game" project.
+More info [here](Day17/Day17.md)
 
