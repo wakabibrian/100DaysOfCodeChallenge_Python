@@ -3,3 +3,4 @@ Today, I am learning "Turtle Graphics (Turtle Module), Tuples, and Importing Mod
 
 Today I learn't;
 1. Understanding Turtle Graphics and How to use the Documentation
+1. Turtle Challenge 1 - Draw a Square
