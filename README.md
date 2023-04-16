@@ -67,4 +67,7 @@ More info [here](Day16/Day16.md)
 ## Day 17
 Today, I am learning "creating classes" and building "Quiz Game" project.
 More info [here](Day17/Day17.md)
-
+2
+## Day 18
+Today, I am learning "Turtle Graphics, Tuples, and Importing Modules"
+More info [here](Day18/Day18.md)
