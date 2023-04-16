@@ -41,6 +41,15 @@
 # For bigger library from the internet we have to use/install from the Python Library
 # We only install libraries that we want to use
 
+# -----------------Turtle Challenge 2 - Draw a Dashed Line-------------------#
+from turtle import Turtle, Screen
+
+tim = Turtle()
+for _ in range(20):
+    tim.forward(10)
+    tim.penup()
+    tim.forward(10)
+    tim.pendown()
 
 
 
@@ -48,5 +57,8 @@
 
 
 
-# screen = Screen()
-# screen.exitonclick()
+
+
+
+screen = Screen()
+screen.exitonclick()
