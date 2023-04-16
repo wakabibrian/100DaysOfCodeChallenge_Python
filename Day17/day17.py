@@ -28,31 +28,34 @@
 
 # When a  function  is attached to an object is called a method
 
-class User:
-    def __init__(self, user_id, username):
-        # Remember attributes are the things that the object will have (variables associated with the final object)
-        # self represents the object that was created from a particular class (its a convention, you can use any word.)
-        self.id = user_id
-        self.username = username
-        self.followers = 0
-        self.following = 0
+# class User:
+#     def __init__(self, user_id, username):
+#         # Remember attributes are the things that the object will have (variables associated with the final object)
+#         # self represents the object that was created from a particular class (its a convention, you can use any word.)
+#         self.id = user_id
+#         self.username = username
+#         self.followers = 0
+#         self.following = 0
     
-    def follow(self, user):
-        # A method should always have a self parameter as the first parameter: whenever it is called, it knows the object that called it.
-        user.followers += 1
-        self.following += 1
-        #object.attribute
+#     def follow(self, user):
+#         # A method should always have a self parameter as the first parameter: whenever it is called, it knows the object that called it.
+#         user.followers += 1
+#         self.following += 1
+#         #object.attribute
         
 
 
-# The __init__ fununction will always be called everytime you will create a new objects
-user_1 = User("0001", "Wakabi")
-user_2 = User("0002", "Britney")
-print(user_1.username)
-print(user_2.id)
-print(user_1.followers)
+# # The __init__ fununction will always be called everytime you will create a new objects
+# user_1 = User("0001", "Wakabi")
+# user_2 = User("0002", "Britney")
+# print(user_1.username)
+# print(user_2.id)
+# print(user_1.followers)
 
-user_1.follow(user_2)
-print(user_1.followers)
-print(user_1.following)
+# user_1.follow(user_2)
+# print(user_1.followers)
+# print(user_1.following)
+
+# -----------------Day 17 Project: Quiz-------------------#
+
 
