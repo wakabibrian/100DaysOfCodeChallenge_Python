@@ -110,31 +110,54 @@
 # if you want to change: you have to first convert it into a list list(my_tuple)
 
 
+# import turtle as t
+# import random
+
+# tim = t.Turtle()
+# t.colormode(255)
+
+# def random_color():
+#     random_red = random.randint(0, 255)
+#     random_green = random.randint(0, 255)
+#     random_blue = random.randint(0, 255)
+#     random_color = (random_red, random_green, random_blue)
+#     return random_color
+
+
+# # colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
+# direction = [0, 90, 180, 270]
+# tim.pensize(10)
+# tim.speed("fastest")
+
+
+# for _ in range(200):
+#     tim.color(random_color())
+#     tim.forward(30)
+#     tim.setheading(random.choice(direction))
+
+# -----------------Turtle Challenge 5 - Draw a Spirograph-------------------#
 import turtle as t
 import random
 
 tim = t.Turtle()
 t.colormode(255)
+tim.speed("fastest")
+
 
 def random_color():
     random_red = random.randint(0, 255)
     random_green = random.randint(0, 255)
     random_blue = random.randint(0, 255)
-    random_color = (random_red, random_green, random_blue)
-    return random_color
+    color = (random_red, random_green, random_blue)
+    return color
 
+def draw_spiral(circle_gap):
+    for _ in range(int(360/circle_gap)):
+        tim.color(random_color())
+        tim.circle(100)
+        tim.right(circle_gap)
 
-# colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
-direction = [0, 90, 180, 270]
-tim.pensize(10)
-tim.speed("fastest")
-
-
-for _ in range(200):
-    tim.color(random_color())
-    tim.forward(30)
-    tim.setheading(random.choice(direction))
-
+draw_spiral(5)
 
 
 screen = t.Screen()
