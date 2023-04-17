@@ -52,31 +52,49 @@
 #     tim.pendown()
 
 # -----------------Turtle Challenge 3 - Drawing Different Shapes-------------------#
+# from turtle import Turtle, Screen
+# import random
+
+# class Shape:
+#     def __init__(self):
+#         self.number_of_sides = 3
+#         self.tim = Turtle()
+
+#     def draw_shape(self):
+        
+#         number_sides = self.number_of_sides
+#         for _ in range(number_sides):
+#             self.tim.forward(100)
+#             self.tim.right(360/self.number_of_sides)
+#         self.number_of_sides += 1
+    
+#     def change_pen_color(self):
+#         colours = ["cyan", "purple", "red", "blue", "brown", "black", "magenta", "forest green"]
+#         self.tim.pencolor(random.choice(colours))
+
+# shape = Shape()
+
+# for _ in range(8):
+#     shape.change_pen_color()
+#     shape.draw_shape()
+
+# -----------------Turtle Challenge 4 - Generate a Random Walk-------------------#
 from turtle import Turtle, Screen
 import random
 
-class Shape:
-    def __init__(self):
-        self.number_of_sides = 3
-        self.tim = Turtle()
+tim = Turtle()
 
-    def draw_shape(self):
-        
-        number_sides = self.number_of_sides
-        for _ in range(number_sides):
-            self.tim.forward(100)
-            self.tim.right(360/self.number_of_sides)
-        self.number_of_sides += 1
-    
-    def change_pen_color(self):
-        colours = ["cyan", "purple", "red", "blue", "brown", "black", "magenta", "forest green"]
-        self.tim.pencolor(random.choice(colours))
+colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
+direction = [0, 90, 180, 270]
+tim.pensize(10)
+tim.speed("fastest")
 
-shape = Shape()
 
-for _ in range(8):
-    shape.change_pen_color()
-    shape.draw_shape()
+
+for _ in range(200):
+    tim.color(random.choice(colours))
+    tim.forward(30)
+    tim.setheading(random.choice(direction))
 
 
 screen = Screen()
