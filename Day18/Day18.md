@@ -8,3 +8,4 @@ Today I learn't;
 4. Turtle Challenge 2 - Draw a Dashed Line
 5. Turtle Challenge 3 - Drawing Different Shapes
 6. Turtle Challenge 4 - Generate a Random Walk
+7. Python Tuples and How to Generate Random RGB Colours

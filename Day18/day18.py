@@ -61,13 +61,13 @@
 #         self.tim = Turtle()
 
 #     def draw_shape(self):
-        
+
 #         number_sides = self.number_of_sides
 #         for _ in range(number_sides):
 #             self.tim.forward(100)
 #             self.tim.right(360/self.number_of_sides)
 #         self.number_of_sides += 1
-    
+
 #     def change_pen_color(self):
 #         colours = ["cyan", "purple", "red", "blue", "brown", "black", "magenta", "forest green"]
 #         self.tim.pencolor(random.choice(colours))
@@ -79,23 +79,63 @@
 #     shape.draw_shape()
 
 # -----------------Turtle Challenge 4 - Generate a Random Walk-------------------#
-from turtle import Turtle, Screen
+# from turtle import Turtle, Screen
+# import random
+
+# tim = Turtle()
+
+# colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
+# direction = [0, 90, 180, 270]
+# tim.pensize(10)
+# tim.speed("fastest")
+
+
+# for _ in range(200):
+#     tim.color(random.choice(colours))
+#     tim.forward(30)
+#     tim.setheading(random.choice(direction))
+
+
+# -----------------Python Tuples and How to Generate Random RGB Colours-------------------#
+# A Tuple is a datatype in python: eg (1, 3, 8)
+# Tuple (1, 3, 8) - Ordered
+# List [1, 3, 8]
+
+# my_tuple = (1, 3, 8)
+# print(my_tuple[0])
+
+# Difference with lists: A tuple you cant change the values, cant remove items (Immutable)
+# my_tuple[2] = 7 # Error
+# Why use Tuples: If you want to create things that are constant e.g color scheme for a website
+# if you want to change: you have to first convert it into a list list(my_tuple)
+
+
+import turtle as t
 import random
 
-tim = Turtle()
+tim = t.Turtle()
+t.colormode(255)
 
-colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
+def random_color():
+    random_red = random.randint(0, 255)
+    random_green = random.randint(0, 255)
+    random_blue = random.randint(0, 255)
+    random_color = (random_red, random_green, random_blue)
+    return random_color
+
+
+# colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
 direction = [0, 90, 180, 270]
 tim.pensize(10)
 tim.speed("fastest")
 
 
-
 for _ in range(200):
-    tim.color(random.choice(colours))
+    tim.color(random_color())
     tim.forward(30)
     tim.setheading(random.choice(direction))
 
 
-screen = Screen()
+
+screen = t.Screen()
 screen.exitonclick()
