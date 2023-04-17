@@ -136,29 +136,45 @@
 #     tim.setheading(random.choice(direction))
 
 # -----------------Turtle Challenge 5 - Draw a Spirograph-------------------#
-import turtle as t
-import random
+# import turtle as t
+# import random
 
-tim = t.Turtle()
-t.colormode(255)
-tim.speed("fastest")
-
-
-def random_color():
-    random_red = random.randint(0, 255)
-    random_green = random.randint(0, 255)
-    random_blue = random.randint(0, 255)
-    color = (random_red, random_green, random_blue)
-    return color
-
-def draw_spiral(circle_gap):
-    for _ in range(int(360/circle_gap)):
-        tim.color(random_color())
-        tim.circle(100)
-        tim.right(circle_gap)
-
-draw_spiral(5)
+# tim = t.Turtle()
+# t.colormode(255)
+# tim.speed("fastest")
 
 
-screen = t.Screen()
-screen.exitonclick()
+# def random_color():
+#     random_red = random.randint(0, 255)
+#     random_green = random.randint(0, 255)
+#     random_blue = random.randint(0, 255)
+#     color = (random_red, random_green, random_blue)
+#     return color
+
+# def draw_spiral(circle_gap):
+#     for _ in range(int(360/circle_gap)):
+#         tim.color(random_color())
+#         tim.circle(100)
+#         tim.right(circle_gap)
+
+# draw_spiral(5)
+
+
+# screen = t.Screen()
+# screen.exitonclick()
+
+# -----------------Day 18 Project: Hirst Painting Project-------------------#
+import colorgram
+
+rgb_colors = []
+
+image = "C:/Users/b.wakabi/Desktop/100DaysOfCodeChallenge_Python/Day18/art.jpg"
+colors = colorgram.extract(image, 30)
+
+for color in colors:
+    r = color.rgb.r
+    g = color.rgb.g
+    b = color.rgb.b
+    rgb_colors.append((r, g, b))
+
+print(rgb_colors)

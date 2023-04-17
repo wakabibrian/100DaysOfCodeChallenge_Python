@@ -10,3 +10,4 @@ Today I learn't;
 6. Turtle Challenge 4 - Generate a Random Walk
 7. Python Tuples and How to Generate Random RGB Colours
 8. Turtle Challenge 5 - Draw a Spirograph
+8. Day 18 Project: Hirst Painting Project
