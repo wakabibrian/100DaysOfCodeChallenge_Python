@@ -164,17 +164,95 @@
 # screen.exitonclick()
 
 # -----------------Day 18 Project: Hirst Painting Project-------------------#
-import colorgram
+# import turtle as t
+# import random
+# t.colormode(255)
 
-rgb_colors = []
+# import colorgram
 
-image = "C:/Users/b.wakabi/Desktop/100DaysOfCodeChallenge_Python/Day18/art.jpg"
-colors = colorgram.extract(image, 30)
+# rgb_colors = []
 
-for color in colors:
-    r = color.rgb.r
-    g = color.rgb.g
-    b = color.rgb.b
-    rgb_colors.append((r, g, b))
+# image = "C:/Users/b.wakabi/Desktop/100DaysOfCodeChallenge_Python/Day18/art.jpg"
+# colors = colorgram.extract(image, 30)
 
-print(rgb_colors)
+# for color in colors:
+#     r = color.rgb.r
+#     g = color.rgb.g
+#     b = color.rgb.b
+#     rgb_colors.append((r, g, b))
+
+# print(rgb_colors)
+
+# color_list = [(202, 164, 110), (149, 75, 50), (222, 201, 136), (53, 93, 123), (170, 154, 41), (138, 31, 20), (134, 163, 184), (197, 92, 73), (47, 121, 86), (73, 43, 35), (145, 178, 149), (14, 98, 70), (232, 176, 165),
+#               (160, 142, 158), (54, 45, 50), (101, 75, 77), (183, 205, 171), (36, 60, 74), (19, 86, 89), (82, 148, 129), (147, 17, 19), (27, 68, 102), (12, 70, 64), (107, 127, 153), (176, 192, 208), (168, 99, 102)]
+# tim = t.Turtle()
+
+
+# def starting_position(x_position, y_position):
+#     tim.penup()
+#     tim.setx(x_position)
+#     tim.sety(y_position)
+#     tim.pendown()
+
+
+# def draw_row_dots(color):
+#     tim.penup()
+#     tim.forward(50)
+#     tim.dot(20, color)
+#     tim.pendown()
+
+# x = -200
+# y = -200
+
+# for _ in range(10):
+#     starting_position(x, y)
+
+#     for _ in range(10):
+#         new_color = random.choice(color_list)
+#         draw_row_dots(new_color)
+
+#     y += 50
+
+# tim.penup()
+# # tim.hideturtle()
+ 
+# for y in range(-250, 250, 50):
+#     for x in range(-250, 250, 50):
+#         tim.goto(x,y)
+#         tim.dot(20, random.choice(color_list))
+ 
+
+import turtle as t
+import random
+t.colormode(255)
+
+color_list = [(202, 164, 110), (149, 75, 50), (222, 201, 136), (53, 93, 123), (170, 154, 41), (138, 31, 20), (134, 163, 184), (197, 92, 73), (47, 121, 86), (73, 43, 35), (145, 178, 149), (14, 98, 70), (232, 176, 165),
+              (160, 142, 158), (54, 45, 50), (101, 75, 77), (183, 205, 171), (36, 60, 74), (19, 86, 89), (82, 148, 129), (147, 17, 19), (27, 68, 102), (12, 70, 64), (107, 127, 153), (176, 192, 208), (168, 99, 102)]
+tim = t.Turtle()
+
+
+tim.speed("fastest")
+tim.hideturtle()
+tim.penup()
+
+x_col, x_row = -200, -200
+y = -200
+
+for _ in range(10):
+    tim.sety(y)
+
+    for _ in range(10):
+        new_color = random.choice(color_list)
+        
+        tim.setx(x_row)
+        tim.dot(20, new_color)
+        x_row += 50
+
+    y += 50
+    x_col += 50
+    x_row = -200    
+
+
+
+screen = t.Screen()
+screen.exitonclick()
