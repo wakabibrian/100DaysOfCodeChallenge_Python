@@ -71,3 +71,7 @@ More info [here](Day17/Day17.md)
 ## Day 18
 Today, I am learning "Turtle Graphics, Tuples, and Importing Modules"
 More info [here](Day18/Day18.md)
+
+## Day 19
+Today, I am learning "Instances, State and Higher Order Functions"
+More info [here](Day19/Day19.md)
