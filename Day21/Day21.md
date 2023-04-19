@@ -1,4 +1,4 @@
 Today, I am learning "Class Inheritance, Slicing and finishing the snake game project"
 
-Project Steps;
-- Step4: 
+Today I have learnt
+1. Class inheritance 
