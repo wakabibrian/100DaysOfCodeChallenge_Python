@@ -79,3 +79,7 @@ More info [here](Day19/Day19.md)
 ## Day 20
 Today, I am building "A snake game project"
 Find project code [here](Day20/Day20.md)
+
+## Day 21
+Today, I am building "Continuation: A snake game project"
+Find project code [here](Day21/Day21.md)
