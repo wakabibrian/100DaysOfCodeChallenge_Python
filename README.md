@@ -26,7 +26,7 @@ More info [here](Day6/Day6.md)
 
 ## Day 7
 I am building "Hangman Project" today.
-More info [here](Day7/Day7.md) 
+Find project code [here](Day7/day7.py) 
 
 ## Day 8
 I am learning "Functions With Imputs" today.
@@ -42,7 +42,7 @@ More info [here](Day10/Day10.md)
 
 ## Day 11
 I am building "Blackjack Project." today.
-More info [here](Day11/Day11.md) 
+Find project code [here](Day11/day11.py) 
 
 ## Day 12
 I am learning "Scope" and building "Number Guessing Game" today.
@@ -54,11 +54,11 @@ More info [here](Day13/Day13.md)
 
 ## Day 14
 I am building a "Higher Lower Game Project" today.
-More info [here](Day14/Day14.md) 
+Find project code [here](Day14/day14.py) 
 
 ## Day 15
 I am building a "Coffe machine Project" today.
-More info [here](Day15/Day15.md)
+Find project code [here](Day15/day15.py)
 
 ## Day 16
 I am learning "OOP" today.
@@ -67,7 +67,7 @@ More info [here](Day16/Day16.md)
 ## Day 17
 Today, I am learning "creating classes" and building "Quiz Game" project.
 More info [here](Day17/Day17.md)
-2
+
 ## Day 18
 Today, I am learning "Turtle Graphics, Tuples, and Importing Modules"
 More info [here](Day18/Day18.md)
@@ -75,3 +75,7 @@ More info [here](Day18/Day18.md)
 ## Day 19
 Today, I am learning "More on Turtle Module: Instances, State and Higher Order Functions"
 More info [here](Day19/Day19.md)
+
+## Day 20
+Today, I am building "A snake game project"
+Find project code [here](Day20/day20.py)
