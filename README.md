@@ -81,5 +81,5 @@ Today, I am building "A snake game project"
 Find project code [here](Day20/Day20.md)
 
 ## Day 21
-Today, I am building "Continuation: A snake game project"
-Find project code [here](Day21/Day21.md)
+Today, I am learning "Class Inheritance, Slicing and finishing the snake game project"
+More info [here](Day21/Day21.md)
