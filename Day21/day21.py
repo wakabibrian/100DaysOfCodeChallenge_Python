@@ -1,11 +1,11 @@
-#---------------Class Inheritance-----------------#
+# ---------------Class Inheritance-----------------#
 # Inheritance: is another feature of object oriented programming that is really helpful.
-# Class Inheritance is the process of inheriting behaviours from an existing class 
+# Class Inheritance is the process of inheriting behaviours from an existing class
 # A class can inherit appearance; attributes and behaviour; methods
 # Fish inheriting from the animal class
 # class Fish(Animal):
-    # def __init__(self):
-    #     super().__init__() #Initialize everything that super class can do
+# def __init__(self):
+#     super().__init__() #Initialize everything that super class can do
 
 # class Animal:
 #     def __init__(self):
@@ -17,7 +17,7 @@
 # class Fish(Animal):
 #     def __init__(self):
 #         super().__init__()
-    
+
 #     def breathe(self):
 #         super().breathe()
 #         print("Doing this under water")
@@ -29,10 +29,17 @@
 # fish.swim()
 # fish.breathe()
 
-#--------------Snake Game: Continuation-----------------#
+# --------------How to Slice Lists & Tuples in Python-----------------#
+# piano_keys = ["a", "b", "c", "d", "e", "f", "g"]
+# print(piano_keys[2:5]) #c,d,e
+# print(piano_keys[2:]) #c......
+# print(piano_keys[:5]) #......e
+# print(piano_keys[2:5:2]) #c,e (skips 2s)
+# print(piano_keys[::2]) #a,c,e,g (skips 2s)
+# print(piano_keys[::-1]) #g,f,e,--- (reverses)
+# # The above slicing method also works for turples 
 
-
-
+# --------------Snake Game: Continuation-----------------#
 from turtle import Screen
 from snake import Snake
 from food import Food
@@ -66,11 +73,11 @@ while game_is_on:
         food.refresh()
         snake.extend()
         scoreboard.increase_score()
-    
+
     # Detect collision with wall
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
         game_is_on = False
-    
+
     # Detect collision with tail
     for segment in snake.segments:
         if segment == snake.head:
