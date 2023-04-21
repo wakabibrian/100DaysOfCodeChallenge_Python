@@ -89,5 +89,5 @@ Today, I am building "Pong Game project"
 More info [here](Day22/Day22.md)
 
 ## Day 23
-Today, I am building "Turtle Crossing Capstone Project"
+Today, I am building "Turtle Crossing Capstone Project".
 More info [here](Day23/Day23.md)
