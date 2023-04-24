@@ -119,3 +119,8 @@ More info [here](Day23/Day23.md)
 
 Today, I am learning "Files, Directories and Paths"
 More info [here](Day24/Day24.md)
+
+## Day 25
+
+Today, I am learning "Working with CSV Data and the Panda Library"
+More info [here](Day25/Day25.md)
