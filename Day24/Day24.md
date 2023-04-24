@@ -6,3 +6,4 @@ I learn't;
 2. How to Open, Read, and Write to Files using the "with" Keyword
 3. Write and remembering the highest score of the snake game
 4. Understand Relative and Absolute File Paths
+5. Day 24 Project: Mail Merge Project
