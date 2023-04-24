@@ -15,51 +15,80 @@
 # with open("new_file.txt", mode="w") as file:
 #     file.write("\nMy text.")
 
-from turtle import Screen
-from snake import Snake
-from food import Food
-from scoreboard import Scoreboard
-import time
+# -----------Write and remembering the highest score of the snake game--------------#
 
-screen = Screen()
-screen.setup(width=600, height=600)
-screen.bgcolor("black")
-screen.title("My Snake Game")
-screen.tracer(0)
 
-snake = Snake()
-food = Food()
-scoreboard = Scoreboard()
+# from turtle import Screen
+# from snake import Snake
+# from food import Food
+# from scoreboard import Scoreboard
+# import time
 
-screen.listen()
-screen.onkey(snake.up, "Up")
-screen.onkey(snake.down, "Down")
-screen.onkey(snake.left, "Left")
-screen.onkey(snake.right, "Right")
+# screen = Screen()
+# screen.setup(width=600, height=600)
+# screen.bgcolor("black")
+# screen.title("My Snake Game")
+# screen.tracer(0)
 
-game_is_on = True
-while game_is_on:
-    screen.update()
-    time.sleep(0.1)
-    snake.move()
+# snake = Snake()
+# food = Food()
+# scoreboard = Scoreboard()
 
-    # Detect collision with food
-    if snake.head.distance(food) < 15:
-        food.refresh()
-        snake.extend()
-        scoreboard.increase_score()
+# screen.listen()
+# screen.onkey(snake.up, "Up")
+# screen.onkey(snake.down, "Down")
+# screen.onkey(snake.left, "Left")
+# screen.onkey(snake.right, "Right")
 
-    # Detect collision with wall
-    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
-        # game_is_on = False
-        scoreboard.reset()
-        snake.reset()
+# game_is_on = True
+# while game_is_on:
+#     screen.update()
+#     time.sleep(0.1)
+#     snake.move()
 
-    # Detect collision with tail
-    for segment in snake.segments[1:]:
-        if snake.head.distance(segment) < 10:
-            scoreboard.reset()
-            snake.reset()
+#     # Detect collision with food
+#     if snake.head.distance(food) < 15:
+#         food.refresh()
+#         snake.extend()
+#         scoreboard.increase_score()
 
-# scoreboard.game_over()
-screen.exitonclick()
+#     # Detect collision with wall
+#     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+#         # game_is_on = False
+#         scoreboard.reset()
+#         snake.reset()
+
+#     # Detect collision with tail
+#     for segment in snake.segments[1:]:
+#         if snake.head.distance(segment) < 10:
+#             scoreboard.reset()
+#             snake.reset()
+
+# # scoreboard.game_over()
+# screen.exitonclick()
+
+# ----------Understand Relative and Absolute File Paths---------------#
+# On computers, files live within folders
+# On windows, c is usually the root folder
+# --- Absolute File Path might be
+# c:
+# c:/Work
+# c:/Work/report.doc
+# c:/Work/Project
+# c:/Work/Project/talk.ppt #Navigated to file talk.ppt
+# Absolute path always start off relative to the root
+
+# --- Relative File Path might be
+# Relative always start off from the Working Directory:
+# Directory/Folder that we are currentltly working from
+# If we are working from Project folder and talk.ppt is in the project folder
+# The relative file path is: ./talk.ppt
+# If we are in the Work folder, to get to talk.ppt: ./Project/talk.ppt
+# But the absolute path doesnot change
+
+# --- Going upwards in the folder tree
+# To access report.doc if we are working in the project folder..
+# ../report.doc
+# for relative path, if the file is in the same folder; ./report.doc or report.doc
+# Difference between Absolute and Relative: For absolute, it is relative to the root folder
+# For Relative, it is relative to the current working directory
