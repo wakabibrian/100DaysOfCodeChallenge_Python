@@ -22,7 +22,53 @@
 # It is Python's Data Analysis Library
 # For performing analysis on tabular data
 
+# ----------------DataFrames & Series: Working with Rows & Columns----------------#
+
 import pandas
 
 data = pandas.read_csv("weather_data.csv")
-print(data["temp"])
+# print(data["temp"])
+# print(type(data)) - Data frame (Whole sheet)
+# print(type(data["temp"])) - Series (single column)
+# panda_dict = data.to_dict()
+# temps = data["temp"].to_list()
+# sum = 0
+# print(panda_dict)
+# print(list)
+
+# for temp in temps:
+#     sum += temp
+
+# average_temp = sum/len(temps)
+# print(average_temp)
+
+# average = data["temp"].mean()
+# print(average)
+
+# maximum = data["temp"].max()
+# print(maximum)
+
+# print(data.condition)
+
+# ---Data in rows
+# print(data[data["day"] == "Monday"])
+
+# maximum = data["temp"].max()
+# print(data[data["temp"] == maximum])
+
+# monday = data[data.day == "Monday"]
+# # print(monday.condition)
+# temp_cel = int(monday.temp[0])
+# # (0°C × 9/5) + 32
+# temp_fer = (temp_cel * (9/5)) + 32
+# print(temp_fer)
+
+# --- Creating a DataFrame from scratch
+data_dict = {
+    "students": ["Amy", "Brian", "Britney"],
+    "scores": [70, 95, 62]
+}
+
+data = pandas.DataFrame(data_dict)
+# print(data)
+data.to("new_data.csv")
