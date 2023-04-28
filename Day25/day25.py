@@ -24,9 +24,9 @@
 
 # ----------------DataFrames & Series: Working with Rows & Columns----------------#
 
-import pandas
+# import pandas
 
-data = pandas.read_csv("weather_data.csv")
+# data = pandas.read_csv("weather_data.csv")
 # print(data["temp"])
 # print(type(data)) - Data frame (Whole sheet)
 # print(type(data["temp"])) - Series (single column)
@@ -64,11 +64,16 @@ data = pandas.read_csv("weather_data.csv")
 # print(temp_fer)
 
 # --- Creating a DataFrame from scratch
-data_dict = {
-    "students": ["Amy", "Brian", "Britney"],
-    "scores": [70, 95, 62]
-}
+# data_dict = {
+#     "students": ["Amy", "Brian", "Britney"],
+#     "scores": [70, 95, 62]
+# }
 
-data = pandas.DataFrame(data_dict)
-# print(data)
-data.to("new_data.csv")
+# data = pandas.DataFrame(data_dict)
+# # print(data)
+# data.to("new_data.csv")
+
+# ----------------The Great Squirrel Census Data Analysis (with Pandas!)----------------#
+import pandas
+
+data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
