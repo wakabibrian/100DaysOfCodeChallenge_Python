@@ -126,10 +126,7 @@ while len(correct_guesses) <= 50:
             if state not in correct_guesses:
                 not_guessed.append(state)
 
-        data_dict = {
-            "States": not_guessed
-        }
-        new_data = pandas.DataFrame(data_dict)
+        new_data = pandas.DataFrame(not_guessed)
 
         new_data.to_csv("states_to_learn.csv")
 
@@ -158,25 +155,7 @@ while len(correct_guesses) <= 50:
         t.goto(x_coor, y_coor)
         t.write(answer_state)
 
-
-# for s in not_guessed:
-    # not_guessed_state = data[data.state == s]
-    # x_coor = not_guessed_state.x[state_list.index(s)]
-    # y_coor = not_guessed_state.y[state_list.index(s)]
-
-    # t.hideturtle()
-    # t.color("red")
-    # t.penup()
-    # t.goto(x_coor, y_coor)
-    # t.write(s)
-
-data_dict = {
-    "States": not_guessed
-}
-
-data = pandas.DataFrame(data_dict)
-
-data.to_csv("states_to_learn.csv")
+screen.exitonclick()
 
 # ----- Getting the coordinates
 # def get_mouse_click_coor(x, y):
