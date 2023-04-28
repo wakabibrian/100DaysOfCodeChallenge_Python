@@ -23,7 +23,6 @@
 # For performing analysis on tabular data
 
 # ----------------DataFrames & Series: Working with Rows & Columns----------------#
-
 # import pandas
 
 # data = pandas.read_csv("weather_data.csv")
@@ -70,10 +69,24 @@
 # }
 
 # data = pandas.DataFrame(data_dict)
-# # print(data)
-# data.to("new_data.csv")
+# print(data)
+# # data.to("new_data.csv")
 
 # ----------------The Great Squirrel Census Data Analysis (with Pandas!)----------------#
 import pandas
 
 data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+squirrel_colors_list = data["Primary Fur Color"].to_list()
+
+black = squirrel_colors_list.count("Black")
+gray = squirrel_colors_list.count("Gray")
+cinnamon = squirrel_colors_list.count("Cinnamon")
+
+data_dict = {
+    "Fur Color": ["Gray", "Cinnamon", "Black"],
+    "Count": [gray, cinnamon, black]
+}
+
+squirrel_color_data = pandas.DataFrame(data_dict)
+
+squirrel_color_data.to_csv("squirrel_color.csv")
