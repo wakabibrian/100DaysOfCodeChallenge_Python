@@ -23,6 +23,7 @@
 # For performing analysis on tabular data
 
 # ----------------DataFrames & Series: Working with Rows & Columns----------------#
+# import turtle
 # import pandas
 
 # data = pandas.read_csv("weather_data.csv")
@@ -55,9 +56,10 @@
 # maximum = data["temp"].max()
 # print(data[data["temp"] == maximum])
 
-# monday = data[data.day == "Monday"]
-# # print(monday.condition)
-# temp_cel = int(monday.temp[0])
+# monday = data[data.day == "Wednesday"]
+# print(monday)
+# print(monday.condition)
+# temp_cel = monday.temp[0]
 # # (0°C × 9/5) + 32
 # temp_fer = (temp_cel * (9/5)) + 32
 # print(temp_fer)
@@ -98,6 +100,7 @@
 # squirrel_color_data.to_csv("squirrel_color.csv")
 
 # ----------------Day 25 Project: U.S. States Game----------------#
+import pandas
 import turtle
 
 screen = turtle.Screen()
@@ -105,11 +108,30 @@ screen.title("U.S. States Game")
 image = "blank_states_img.gif"
 screen.addshape(image)
 turtle.shape(image)
+correct_guesses = []
 
-answer_state = screen.textinput(
-    title="Guess the state", prompt="What's another state's name?")
+us_state = turtle.Turtle()
 
-print(answer_state)
+while len(correct_guesses) <= 50:
+    answer_state = screen.textinput(
+        title=f"{len(correct_guesses)}/50 Guess the state", prompt="What's another state's name?").title()
+
+    data = pandas.read_csv("50_states.csv")
+    state_list = data.state.to_list()
+
+    if answer_state in state_list and answer_state not in correct_guesses:
+        correct_guesses.append(answer_state)
+
+        guessed_state = data[data.state == answer_state]
+        x_coor = guessed_state.x[state_list.index(answer_state)]
+        y_coor = guessed_state.y[state_list.index(answer_state)]
+
+        us_state.hideturtle()
+        us_state.penup()
+        us_state.goto(x_coor, y_coor)
+        us_state.write(answer_state, align="center",
+                       font=("Arial", 10, "normal"))
+
 
 # ----- Getting the coordinates
 # def get_mouse_click_coor(x, y):
