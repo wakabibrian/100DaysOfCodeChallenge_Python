@@ -72,7 +72,7 @@
 
 # data = pandas.DataFrame(data_dict)
 # print(data)
-# # data.to("new_data.csv")
+# # data.to_csv("new_data.csv")
 
 # ----------------The Great Squirrel Census Data Analysis (with Pandas!)----------------#
 # import pandas
@@ -110,7 +110,7 @@ screen.addshape(image)
 turtle.shape(image)
 correct_guesses = []
 
-us_state = turtle.Turtle()
+t = turtle.Turtle()
 
 while len(correct_guesses) <= 50:
     answer_state = screen.textinput(
@@ -119,6 +119,33 @@ while len(correct_guesses) <= 50:
     data = pandas.read_csv("50_states.csv")
     state_list = data.state.to_list()
 
+    if answer_state == "Exit":
+        not_guessed = []
+
+        for state in state_list:
+            if state not in correct_guesses:
+                not_guessed.append(state)
+
+        data_dict = {
+            "States": not_guessed
+        }
+        new_data = pandas.DataFrame(data_dict)
+
+        new_data.to_csv("states_to_learn.csv")
+
+        for state in not_guessed:
+            not_guessed_state = data[data.state == state]
+            x_coor = not_guessed_state.x[state_list.index(state)]
+            y_coor = not_guessed_state.y[state_list.index(state)]
+
+            t.hideturtle()
+            t.color("red")
+            t.penup()
+            t.goto(x_coor, y_coor)
+            t.write(state)
+
+        break
+
     if answer_state in state_list and answer_state not in correct_guesses:
         correct_guesses.append(answer_state)
 
@@ -126,12 +153,30 @@ while len(correct_guesses) <= 50:
         x_coor = guessed_state.x[state_list.index(answer_state)]
         y_coor = guessed_state.y[state_list.index(answer_state)]
 
-        us_state.hideturtle()
-        us_state.penup()
-        us_state.goto(x_coor, y_coor)
-        us_state.write(answer_state, align="center",
-                       font=("Arial", 10, "normal"))
+        t.hideturtle()
+        t.penup()
+        t.goto(x_coor, y_coor)
+        t.write(answer_state)
 
+
+# for s in not_guessed:
+    # not_guessed_state = data[data.state == s]
+    # x_coor = not_guessed_state.x[state_list.index(s)]
+    # y_coor = not_guessed_state.y[state_list.index(s)]
+
+    # t.hideturtle()
+    # t.color("red")
+    # t.penup()
+    # t.goto(x_coor, y_coor)
+    # t.write(s)
+
+data_dict = {
+    "States": not_guessed
+}
+
+data = pandas.DataFrame(data_dict)
+
+data.to_csv("states_to_learn.csv")
 
 # ----- Getting the coordinates
 # def get_mouse_click_coor(x, y):
