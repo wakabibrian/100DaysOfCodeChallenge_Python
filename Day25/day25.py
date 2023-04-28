@@ -73,24 +73,46 @@
 # # data.to("new_data.csv")
 
 # ----------------The Great Squirrel Census Data Analysis (with Pandas!)----------------#
-import pandas
+# import pandas
 
-data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+# data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
 
-# squirrel_colors_list = data["Primary Fur Color"].to_list()
-# black = squirrel_colors_list.count("Black")
-# gray = squirrel_colors_list.count("Gray")
-# cinnamon = squirrel_colors_list.count("Cinnamon")
+# # Option 1
+# # squirrel_colors_list = data["Primary Fur Color"].to_list()
+# # black = squirrel_colors_list.count("Black")
+# # gray = squirrel_colors_list.count("Gray")
+# # cinnamon = squirrel_colors_list.count("Cinnamon")
 
-black = len(data[data["Primary Fur Color"] == "Black"])
-cinnamon = len(data[data["Primary Fur Color"] == "Cinnamon"])
-gray = len(data[data["Primary Fur Color"] == "Gray"])
+# # Option 2
+# black = len(data[data["Primary Fur Color"] == "Black"])
+# cinnamon = len(data[data["Primary Fur Color"] == "Cinnamon"])
+# gray = len(data[data["Primary Fur Color"] == "Gray"])
 
-data_dict = {
-    "Fur Color": ["Gray", "Cinnamon", "Black"],
-    "Count": [gray, cinnamon, black]
-}
+# data_dict = {
+#     "Fur Color": ["Gray", "Cinnamon", "Black"],
+#     "Count": [gray, cinnamon, black]
+# }
 
-squirrel_color_data = pandas.DataFrame(data_dict)
+# squirrel_color_data = pandas.DataFrame(data_dict)
 
-squirrel_color_data.to_csv("squirrel_color.csv")
+# squirrel_color_data.to_csv("squirrel_color.csv")
+
+# ----------------Day 25 Project: U.S. States Game----------------#
+import turtle
+
+screen = turtle.Screen()
+screen.title("U.S. States Game")
+image = "blank_states_img.gif"
+screen.addshape(image)
+turtle.shape(image)
+
+answer_state = screen.textinput(
+    title="Guess the state", prompt="What's another state's name?")
+
+print(answer_state)
+
+# ----- Getting the coordinates
+# def get_mouse_click_coor(x, y):
+#     print(x, y)
+# turtle.onscreenclick(get_mouse_click_coor)
+# turtle.mainloop()
