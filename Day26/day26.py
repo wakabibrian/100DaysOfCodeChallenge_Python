@@ -55,11 +55,24 @@
 # You are going to create a list called result which contains the numbers
 # that are common in both files.
 
-with open("file1.txt") as file1:
-    file_data1 = file1.readlines()
+# with open("file1.txt") as file1:
+#     file_data1 = file1.readlines()
 
-with open("file2.txt") as file2:
-    file_data2 = file2.readlines()
+# with open("file2.txt") as file2:
+#     file_data2 = file2.readlines()
 
-result = [int(num) for num in file_data1 if num in file_data2]
-print(result)
+# result = [int(num) for num in file_data1 if num in file_data2]
+# print(result)
+
+# ------------------How to use Dictionary Comprehension---------------------#
+# new_dict = {new_key: new_value for item in list}
+# new_dict = {new_key: new_value for (key, value) in dict.items()}
+# new_dict = {new_key: new_value for (key, value) in dict.items() if test}
+# import random
+# names = ["Brian", "Alex", "Britney", "Loyce", "Beth", "Joel"]
+# new_dict = {name: random.randint(1, 100) for name in names}
+
+# passed_students = {name: mark for (
+#     name, mark) in new_dict.items() if mark >= 60}
+
+# print(passed_students)

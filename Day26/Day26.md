@@ -7,3 +7,4 @@ I learn't:
 3. Exercise 2: Filtering Even Numbers
 4. Exercise 3: Data Overlap
 5. Apply List Comprehension to the U.S. States Game (Day 25)
+6. How to use Dictionary Comprehension
