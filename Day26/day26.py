@@ -30,3 +30,13 @@
 
 # long_names = [name.upper() for name in names if len(name) >= 5]
 # print(long_names)
+
+# ------------------Exercise 1: Squaring Numbers---------------------#
+# ------------------Exercise 1: Squaring Numbers---------------------#
+# You are going to write a List Comprehension to create a new list called squared_numbers.
+# This new list should contain every number in the list numbers but each number should be squared.
+numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+
+squared_numbers = [number ** 2 for number in numbers]
+
+print(squared_numbers)
