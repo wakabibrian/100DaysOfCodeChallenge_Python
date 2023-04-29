@@ -124,3 +124,8 @@ More info [here](Day24/Day24.md)
 
 Today, I am learning "Working with CSV Data and the Panda Library"
 More info [here](Day25/Day25.md)
+
+## Day 26
+
+Today, I am learning "List comprehension"
+More info [here](Day26/Day26.md)
