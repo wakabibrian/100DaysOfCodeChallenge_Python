@@ -43,7 +43,23 @@
 # ------------------Exercise 2: Filtering Even Numbers---------------------#
 # You are going to write a List Comprehension to create a new list called result.
 # This new list should only contain the even numbers from the list numbers.
-numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
-result = [number for number in numbers if number % 2 == 0]
+# numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+# result = [number for number in numbers if number % 2 == 0]
 
+# print(result)
+
+# ------------------Exercise 3: Data Overlap---------------------#
+# Take a look inside file1.txt and file2.txt.
+# They each contain a bunch of numbers, each number on a new line.
+
+# You are going to create a list called result which contains the numbers
+# that are common in both files.
+
+with open("file1.txt") as file1:
+    file_data1 = file1.readlines()
+
+with open("file2.txt") as file2:
+    file_data2 = file2.readlines()
+
+result = [int(num) for num in file_data1 if num in file_data2]
 print(result)
