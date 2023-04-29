@@ -120,14 +120,11 @@ while len(correct_guesses) <= 50:
     state_list = data.state.to_list()
 
     if answer_state == "Exit":
-        not_guessed = []
 
-        for state in state_list:
-            if state not in correct_guesses:
-                not_guessed.append(state)
+        not_guessed = [
+            state for state in state_list if state not in correct_guesses]
 
         new_data = pandas.DataFrame(not_guessed)
-
         new_data.to_csv("states_to_learn.csv")
 
         for state in not_guessed:
