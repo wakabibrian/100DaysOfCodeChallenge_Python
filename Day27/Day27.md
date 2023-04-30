@@ -9,3 +9,5 @@ I learn't:
 3. Setting Default Values for Optional Arguments inside a Function Header
 4. \*args: Many Positional Arguments
 5. \*\*kwargs: Many Keyword Arguments
+6. Buttons, Entry, and Setting Component Options
+7. Other Tkinter Widgets: Radiobuttons, Scales, Checkbuttons and more

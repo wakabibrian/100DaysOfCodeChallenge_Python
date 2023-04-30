@@ -73,12 +73,49 @@
 # keyword argurments (kwargs)
 
 # How to create classes with unlimited arguments
-class Car:
-    def __init__(self, **kw):
-        self.make = kw.get("make")
-        self.model = kw.get("model")
+# class Car:
+#     def __init__(self, **kw):
+#         self.make = kw.get("make")
+#         self.model = kw.get("model")
+#         self.color = kw.get("color")
+#         self.size = kw.get("size")
 
 
-my_car = Car(model="Haria")
-print(my_car.make)  # Returns none
-print(my_car.model)
+# my_car = Car(model="Haria")
+# print(my_car.make)  # Returns none
+# print(my_car.model)
+
+# ---------------------Buttons, Entry, and Setting Component Options-------------------#
+# from tkinter import *
+
+# # Creating a window
+# window = Tk()
+# window.title("My first GUI program")
+# window.minsize(width=500, height=300)
+
+# # Creating a Label Component
+# my_label = Label(text="I am a label", font=("Arial", 18, "bold"))
+# my_label.pack()
+
+# # Updating properties
+# my_label["text"] = "New Text"
+# # my_label.config(text="New Text")
+
+
+# # Creating a Button Component
+
+
+# def button_clicked():
+#     new_text = input.get()
+#     my_label.config(text=new_text)
+
+
+# button = Button(text="Click me", command=button_clicked)
+# button.pack()
+
+# # Creating Entry component (input)
+# input = Entry(width=20)
+# input.pack()
+
+# # Keeping the window running
+# window.mainloop()
