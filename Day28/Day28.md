@@ -9,3 +9,4 @@ I learn't:
 3. Day28 Project: Add a Count Down Mechanism
 4. Dynamic Typing Explained
 5. Day28 Project: Setting Different Timer Sessions and Values
+6. Day28 Project: Adding Checkmarks and Resetting the Application
