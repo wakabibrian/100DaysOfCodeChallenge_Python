@@ -282,32 +282,32 @@ from tkinter import *
 FONT = ("Arial", 16, "normal")
 
 
-def click_button():
-    result = round(int(input.get()) * 1.60934, 2)
-    label_4.config(text=result)
+def miles_to_km():
+    result = round(int(miles_input.get()) * 1.60934, 2)
+    km_results_label.config(text=result)
 
 
 window = Tk()
 window.title("Mile to Km Converter")
 window.config(padx=100, pady=100)
 
-label_1 = Label(text="Miles", font=FONT)
-label_1.grid(column=2, row=0)
+miles_label = Label(text="Miles", font=FONT)
+miles_label.grid(column=2, row=0)
 
-label_2 = Label(text="Km", font=FONT)
-label_2.grid(column=2, row=1)
+km_label = Label(text="Km", font=FONT)
+km_label.grid(column=2, row=1)
 
-label_3 = Label(text="is equal to", font=FONT)
-label_3.grid(column=0, row=1)
+equals_to_label = Label(text="is equal to", font=FONT)
+equals_to_label.grid(column=0, row=1)
 
-label_4 = Label(text=f"{0}", font=FONT)
-label_4.grid(column=1, row=1)
+km_results_label = Label(text=f"{0}", font=FONT)
+km_results_label.grid(column=1, row=1)
 
-button = Button(text="Calculate", font=FONT, command=click_button)
-button.grid(column=1, row=2)
+calculate_button = Button(text="Calculate", font=FONT, command=miles_to_km)
+calculate_button.grid(column=1, row=2)
 
-input = Entry(width=10, font=FONT)
-input.grid(column=1, row=0)
+miles_input = Entry(width=10, font=FONT)
+miles_input.grid(column=1, row=0)
 
 
 window.mainloop()
