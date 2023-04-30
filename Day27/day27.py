@@ -283,7 +283,7 @@ FONT = ("Arial", 16, "normal")
 
 
 def miles_to_km():
-    miles = int(miles_input.get())
+    miles = float(miles_input.get())
     km = round(miles * 1.60934, 2)
     km_results_label.config(text=km)
 
