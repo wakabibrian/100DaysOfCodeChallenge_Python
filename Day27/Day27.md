@@ -4,4 +4,5 @@ Today, I am learning "Tkinter, \*args, \*\*kwargs and creating GUI programs"
 
 I learn't:
 
-1.
+1. History of GUI and Introduction to Tkinter
+2. Creating Windows and Labels with Tkinter
