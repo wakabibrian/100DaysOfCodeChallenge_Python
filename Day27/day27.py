@@ -30,7 +30,7 @@
 # my_function(b=5)
 
 # ---------------------*args: Many Positional Arguments-------------------#
-# Unlimited arguments
+# * working with Unlimited positional arguments
 # args by convension - arguments
 # def add(*args):
 #     for n in args:
@@ -40,12 +40,45 @@
 # add(2, 4, 6, 7)
 
 # --- Challenge
-def add(*args):  # * puts any number of arguments in a tuple
-    # You can either loop through them or use index
-    sum = 0
-    for n in args:
-        sum += n
-    return sum
+# def add(*args):  # * puts any number of positional arguments in a tuple
+#     # You can either loop through them or use index
+#     sum = 0
+#     for n in args:
+#         sum += n
+#     return sum
 
 
-print(add(1, 2, 3, 4, 5, 6, 7))
+# print(add(1, 2, 3, 4, 5, 6, 7))
+
+# ---------------------**kwargs: Many Keyword Arguments-------------------#
+# ** helps in working with arbitrary number of keyword arguments
+# def calculate(n, **kwargs):
+#     print(kwargs)  # ** puts any number of keyword arguments in a dictionary
+#     # Accessing
+#     # for key, value in kwargs.items():
+#     #     print(f"{key}: {value}")
+
+#     # Alternatively
+#     # print(kwargs["add"])
+
+#     n += kwargs["add"]
+#     n *= kwargs["multiply"]
+#     print(n)
+
+
+# calculate(2, add=3, multiply=5)
+
+# ---------------------Back to tkinter module-------------------#
+# Reason why there are no options when we call the methods is because they used unlimited
+# keyword argurments (kwargs)
+
+# How to create classes with unlimited arguments
+class Car:
+    def __init__(self, **kw):
+        self.make = kw.get("make")
+        self.model = kw.get("model")
+
+
+my_car = Car(model="Haria")
+print(my_car.make)  # Returns none
+print(my_car.model)
