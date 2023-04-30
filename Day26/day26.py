@@ -93,19 +93,42 @@
 # ------------------Dictionary Comprehension Exercise 2---------------------#
 # You are going to use Dictionary Comprehension to create a dictionary called weather_f
 # that takes each temperature in degrees Celsius and converts it into degrees Fahrenheit.
-weather_c = {
-    "Monday": 12,
-    "Tuesday": 14,
-    "Wednesday": 15,
-    "Thursday": 14,
-    "Friday": 21,
-    "Saturday": 22,
-    "Sunday": 24,
-}
-# 🚨 Don't change code above 👆
+# weather_c = {
+#     "Monday": 12,
+#     "Tuesday": 14,
+#     "Wednesday": 15,
+#     "Thursday": 14,
+#     "Friday": 21,
+#     "Saturday": 22,
+#     "Sunday": 24,
+# }
+# # 🚨 Don't change code above 👆
 
 
-# Write your code 👇 below:
-weather_f = {day: (temp_c * 9/5) + 32 for (day, temp_c) in weather_c.items()}
+# # Write your code 👇 below:
+# weather_f = {day: (temp_c * 9/5) + 32 for (day, temp_c) in weather_c.items()}
 
-print(weather_f)
+# print(weather_f)
+
+# ------------------How to Iterate over a Pandas DataFrame---------------------#
+
+# import pandas
+# student_dict = {
+#     "student": ["Wakabi", "Britney", "Keylah"],
+#     "score": [90, 65, 78]
+# }
+
+# # Before
+# for (key, value) in student_dict.items():
+#     print(f"{key}: {value}")
+
+
+# student_data_frame = pandas.DataFrame(student_dict)
+# # print(student_data_frame)
+
+# # Loop through the rows of a data frame
+# for (index, row) in student_data_frame.iterrows():
+#     # print(row.student)
+#     # print(row.score)
+#     if row.student == "Britney":
+#         print(row.score)
