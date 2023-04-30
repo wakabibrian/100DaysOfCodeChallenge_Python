@@ -8,3 +8,4 @@ I learn't:
 4. Exercise 3: Data Overlap
 5. Apply List Comprehension to the U.S. States Game (Day 25)
 6. How to use Dictionary Comprehension
+7. How to use Dictionary Comprehension
