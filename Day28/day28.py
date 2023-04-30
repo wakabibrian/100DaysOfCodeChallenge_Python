@@ -71,6 +71,8 @@ def count_down(count):
         for _ in range(work_sessions):
             marks += "✔"
         check_marks.config(text=marks)
+        window.attributes('-topmost', 1)
+        window.attributes('-topmost', 0)
 
 
 # ---------------------------- UI SETUP ------------------------------- #
