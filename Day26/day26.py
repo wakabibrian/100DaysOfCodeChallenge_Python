@@ -111,7 +111,6 @@
 # print(weather_f)
 
 # ------------------How to Iterate over a Pandas DataFrame---------------------#
-
 # import pandas
 # student_dict = {
 #     "student": ["Wakabi", "Britney", "Keylah"],
@@ -132,3 +131,5 @@
 #     # print(row.score)
 #     if row.student == "Britney":
 #         print(row.score)
+
+# ------------------Day 26 Project: NATO Alphabet---------------------#

@@ -9,3 +9,4 @@ I learn't:
 5. Apply List Comprehension to the U.S. States Game (Day 25)
 6. How to use Dictionary Comprehension
 7. How to Iterate over a Pandas DataFrame
+8. Day 26 Project: NATO Alphabet
