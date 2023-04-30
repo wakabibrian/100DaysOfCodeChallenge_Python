@@ -236,42 +236,78 @@
 # Place - Precise positioning by providing x and y value (so specific, hard to work with)
 # Grid - Uses columns and rows (Imagines  the entire program is divided in rows and columns) - Easy and flexible
 
+# from tkinter import *
+
+
+# def button_clicked():
+#     new_text = input.get()
+#     my_label.config(text=new_text)
+
+
+# # Creating a window
+# window = Tk()
+# window.title("My first GUI program")
+# window.minsize(width=500, height=300)
+# window.config(padx=20, pady=20)
+
+# # Label widget
+# my_label = Label(text="I am a label", font=("Arial", 18, "bold"))
+# my_label.config(text="New Text")
+# # my_label.pack(side="left")
+# # my_label.place(x=0, y=0)
+# my_label.grid(column=0, row=0)
+# my_label.config(padx=50, pady=50)
+
+# # Button widget
+# button = Button(text="Click me", command=button_clicked)
+# # button.pack(side="left")
+# button.grid(column=1, row=1)
+
+# # New Button
+# new_button = Button(text="New Button")
+# # button.pack(side="left")
+# new_button.grid(column=2, row=0)
+
+# # Entry widget
+# input = Entry(width=20)
+# # input.pack(side="left")
+# input.grid(column=3, row=2)
+
+# # Keeping the window running
+# window.mainloop()
+
+# ---------------------Day 27 Project: Mile to Kilometers Converter-------------------#
 from tkinter import *
 
-
-def button_clicked():
-    new_text = input.get()
-    my_label.config(text=new_text)
+FONT = ("Arial", 16, "normal")
 
 
-# Creating a window
+def click_button():
+    result = round(int(input.get()) * 1.60934, 2)
+    label_4.config(text=result)
+
+
 window = Tk()
-window.title("My first GUI program")
-window.minsize(width=500, height=300)
-window.config(padx=20, pady=20)
+window.title("Mile to Km Converter")
+window.config(padx=100, pady=100)
 
-# Label widget
-my_label = Label(text="I am a label", font=("Arial", 18, "bold"))
-my_label.config(text="New Text")
-# my_label.pack(side="left")
-# my_label.place(x=0, y=0)
-my_label.grid(column=0, row=0)
-my_label.config(padx=50, pady=50)
+label_1 = Label(text="Miles", font=FONT)
+label_1.grid(column=2, row=0)
 
-# Button widget
-button = Button(text="Click me", command=button_clicked)
-# button.pack(side="left")
-button.grid(column=1, row=1)
+label_2 = Label(text="Km", font=FONT)
+label_2.grid(column=2, row=1)
 
-# New Button
-new_button = Button(text="New Button")
-# button.pack(side="left")
-new_button.grid(column=2, row=0)
+label_3 = Label(text="is equal to", font=FONT)
+label_3.grid(column=0, row=1)
 
-# Entry widget
-input = Entry(width=20)
-# input.pack(side="left")
-input.grid(column=3, row=2)
+label_4 = Label(text=f"{0}", font=FONT)
+label_4.grid(column=1, row=1)
 
-# Keeping the window running
+button = Button(text="Calculate", font=FONT, command=click_button)
+button.grid(column=1, row=2)
+
+input = Entry(width=10, font=FONT)
+input.grid(column=1, row=0)
+
+
 window.mainloop()
