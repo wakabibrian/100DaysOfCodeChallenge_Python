@@ -21,10 +21,31 @@
 # ---------------------Setting Default Values for Optional Arguments inside a Function Header-------------------#
 # Using Advanced Python Arguments inorder to specify a wider range of inputs
 # Arguments with default values
-def my_function(a=1, b=2, c=3):
-    pass
+# def my_function(a=1, b=2, c=3):
+#     pass
 
 
-my_function()  # No need to provide the inputs in the function calls
-# changing one of the default value, the rest take on the default values
-my_function(b=5)
+# my_function()  # No need to provide the inputs in the function calls
+# # changing one of the default value, the rest take on the default values
+# my_function(b=5)
+
+# ---------------------*args: Many Positional Arguments-------------------#
+# Unlimited arguments
+# args by convension - arguments
+# def add(*args):
+#     for n in args:
+#         print(n)
+
+
+# add(2, 4, 6, 7)
+
+# --- Challenge
+def add(*args):  # * puts any number of arguments in a tuple
+    # You can either loop through them or use index
+    sum = 0
+    for n in args:
+        sum += n
+    return sum
+
+
+print(add(1, 2, 3, 4, 5, 6, 7))
