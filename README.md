@@ -134,3 +134,8 @@ More info [here](Day26/Day26.md)
 
 Today, I am learning "Tkinter, \*args, \*\*kwargs and creating GUI programs"
 More info [here](Day27/Day27.md)
+
+## Day 28
+
+Today, I am learning "Tkinter, Dynamic Typing and Pomodoro project"
+More info [here](Day28/Day28.md)
