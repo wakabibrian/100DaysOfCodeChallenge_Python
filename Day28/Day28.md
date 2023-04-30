@@ -7,3 +7,4 @@ I learn't:
 1. Day28 Project: Pomodoro - How to work with the Canvas Widget and Add Images to Tkinter
 2. Day28 Project: Challenge - Complete the Application's User Interface (UI)
 3. Day28 Project: Add a Count Down Mechanism
+4. Dynamic Typing Explained
