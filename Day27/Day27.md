@@ -11,3 +11,4 @@ I learn't:
 5. \*\*kwargs: Many Keyword Arguments
 6. Buttons, Entry, and Setting Component Options
 7. Other Tkinter Widgets: Radiobuttons, Scales, Checkbuttons and more
+8. Tkinter Layout Managers: pack(), place() and grid()
