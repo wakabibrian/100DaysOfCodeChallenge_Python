@@ -129,3 +129,8 @@ More info [here](Day25/Day25.md)
 
 Today, I am learning "List comprehension"
 More info [here](Day26/Day26.md)
+
+## Day 27
+
+Today, I am learning "Tkinter, \*args, \*\*kwargs and creating GUI programs"
+More info [here](Day27/Day27.md)
