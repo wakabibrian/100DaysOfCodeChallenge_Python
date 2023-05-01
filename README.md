@@ -139,3 +139,8 @@ More info [here](Day27/Day27.md)
 
 Today, I am learning "Tkinter, Dynamic Typing and Pomodoro project"
 More info [here](Day28/Day28.md)
+
+## Day 29
+
+Today, I am Building a "Password Manager GUI App project with Tkinter"
+Find project code [here](Day29/day29.py)
