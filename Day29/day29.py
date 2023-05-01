@@ -1,12 +1,36 @@
-# ---------------------------- Dialog Boxes and Pop-Ups in Tkinter ------------------------------- #
-# The most popular dialog boxes (popups) are the message boxes
-# Mainly used for giving the user some feedback
-# messagebox is another module of code
-
+from random import choice, randint, shuffle
 from tkinter import *
 from tkinter import messagebox
+import pyperclip
 
 FONT = ("Arial", 10, "normal")
+
+# ---------------------------- PASSWORD GENERATOR ------------------------------- #
+
+
+def generate_password():
+    password_input.delete(0, END)
+
+    letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+               'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+
+    password_letters = [choice(letters) for _ in range(randint(8, 10))]
+    password_symbols = [choice(symbols) for _ in range(randint(2, 4))]
+    password_numbers = [choice(numbers) for _ in range(randint(2, 4))]
+
+    password_list = password_letters + password_symbols + password_numbers
+
+    shuffle(password_list)
+
+    password = "".join(password_list)
+
+    password_input.insert(0, password)
+
+    # Pypthon pyperclip package, copies text to clipboard
+    pyperclip.copy(password)
+# ---------------------------- SAVE PASSWORD ------------------------------- #
 
 
 def save_data():
@@ -15,6 +39,8 @@ def save_data():
     password = password_input.get()
 
     if len(website) == 0 or len(email) == 0 or len(password) == 0:
+        # Dialog Box: Mainly used for giving the user some feedback
+        # messagebox is another module of code
         messagebox.showinfo(
             title="Oops", message="Please don't leave any fields empty!")
     else:
@@ -26,15 +52,10 @@ def save_data():
                 passwords_file.write(f"{website} | {email} | {password}\n")
 
                 website_input.delete(0, END)
-                email_username_input.delete(0, END)
                 password_input.delete(0, END)
 
                 website_input.focus()
 
-
-# ---------------------------- PASSWORD GENERATOR ------------------------------- #
-
-# ---------------------------- SAVE PASSWORD ------------------------------- #
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
@@ -71,7 +92,8 @@ password_input = Entry(font=FONT)
 password_input.grid(column=1, row=3, sticky="EW")
 
 # Buttons
-generate_password_button = Button(text="Generate Password", font=FONT)
+generate_password_button = Button(
+    text="Generate Password", font=FONT, command=generate_password)
 generate_password_button.grid(column=2, row=3, sticky="EW")
 add_btn = Button(text="Add", width=35, font=FONT, command=save_data)
 add_btn.grid(column=1, row=4, columnspan=2, sticky="EW")
