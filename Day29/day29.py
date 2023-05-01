@@ -1,4 +1,10 @@
+# ---------------------------- Dialog Boxes and Pop-Ups in Tkinter ------------------------------- #
+# The most popular dialog boxes (popups) are the message boxes
+# Mainly used for giving the user some feedback
+# messagebox is another module of code
+
 from tkinter import *
+from tkinter import messagebox
 
 FONT = ("Arial", 10, "normal")
 
@@ -8,14 +14,22 @@ def save_data():
     email = email_username_input.get()
     password = password_input.get()
 
-    with open("data.txt", "a") as passwords_file:
-        passwords_file.write(f"{website} | {email} | {password}\n")
+    if len(website) == 0 or len(email) == 0 or len(password) == 0:
+        messagebox.showinfo(
+            title="Oops", message="Please don't leave any fields empty!")
+    else:
+        is_ok = messagebox.askokcancel(
+            title="Verify Details", message=f"These are the details entered. \nEmail: {email} \nPassword: {password} \nIs it okay to save?")
 
-    website_input.delete(0, END)
-    email_username_input.delete(0, END)
-    password_input.delete(0, END)
+        if is_ok:
+            with open("data.txt", "a") as passwords_file:
+                passwords_file.write(f"{website} | {email} | {password}\n")
 
-    website_input.focus()
+                website_input.delete(0, END)
+                email_username_input.delete(0, END)
+                password_input.delete(0, END)
+
+                website_input.focus()
 
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #

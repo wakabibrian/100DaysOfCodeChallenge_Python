@@ -8,3 +8,4 @@ Steps of the project:
 1. Working with Images and Setting up the Canvas
 2. Use grid() and columnspan to Complete the User Interface
 3. Saving Data to File
+4. Dialog Boxes and Pop-Ups in Tkinter
