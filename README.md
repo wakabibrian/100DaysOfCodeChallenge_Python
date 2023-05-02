@@ -144,3 +144,8 @@ More info [here](Day28/Day28.md)
 
 Today, I am Building a "Password Manager GUI App project with Tkinter"
 Find project code [here](Day29/day29.py)
+
+## Day 30
+
+Today, I am learning "Errors, Exceptions and JSON Data"
+More info [here](Day30/Day30.md)
