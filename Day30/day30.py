@@ -196,6 +196,29 @@ def generate_password():
 
     # Pypthon pyperclip package, copies text to clipboard
     pyperclip.copy(password)
+# ---------------------------- SEARCH ------------------------------- #
+
+
+def find_password():
+    website = website_input.get()
+
+    try:
+        with open("data.json") as data_file:
+            data = json.load(data_file)
+    except FileNotFoundError:
+        messagebox.showinfo(
+            title="Error", message="No Data File Found")
+    else:
+        if website in data:
+            password = data[website]["password"]
+            email = data[website]["email"]
+            messagebox.showinfo(title=website_input.get(),
+                                message=f"Email: {email}\nPassword: {password}")
+        else:
+            messagebox.showinfo(
+                title="Error", message=f"No Details for the {website} exists")
+
+
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
 
@@ -216,19 +239,23 @@ def save_data():
         messagebox.showinfo(
             title="Oops", message="Please don't leave any fields empty!")
     else:
-        with open("data.json", "r") as passwords_file:
-            # Reading old data
-            data = json.load(passwords_file)
+        try:
+            with open("data.json", "r") as passwords_file:
+                # Reading old data
+                data = json.load(passwords_file)
+        except FileNotFoundError:
+            with open("data.json", "w") as passwords_file:
+                # saving the updated data
+                json.dump(new_data, passwords_file, indent=4)
+        else:
             # Updating old data with new data
             data.update(new_data)
-
-        with open("data.json", "w") as passwords_file:
-            # saving the updated data
-            json.dump(data, passwords_file, indent=4)
-
+            with open("data.json", "w") as passwords_file:
+                # saving the updated data
+                json.dump(data, passwords_file, indent=4)
+        finally:
             website_input.delete(0, END)
             password_input.delete(0, END)
-
             website_input.focus()
 
 
@@ -257,7 +284,7 @@ password_label.grid(column=0, row=3)
 # using sticky="EW"; EW part is the compass directions (E)ast and (W)est and
 # the sticky basically "sticks" the widget to the edges of the column.
 website_input = Entry(font=FONT)
-website_input.grid(column=1, row=1, columnspan=2, sticky="EW")
+website_input.grid(column=1, row=1, sticky="EW")
 website_input.focus()
 email_username_input = Entry(font=FONT)
 email_username_input.grid(column=1, row=2, columnspan=2, sticky="EW")
@@ -272,5 +299,7 @@ generate_password_button = Button(
 generate_password_button.grid(column=2, row=3, sticky="EW")
 add_btn = Button(text="Add", width=35, font=FONT, command=save_data)
 add_btn.grid(column=1, row=4, columnspan=2, sticky="EW")
+search_button = Button(text="Search", font=FONT, command=find_password)
+search_button.grid(column=2, row=1, sticky="EW")
 
 window.mainloop()
