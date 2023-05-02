@@ -6,3 +6,4 @@ I tearnt;
 
 1. Catching Exceptions: The try catch except finally Pattern
 2. Raising your own Exceptions
+3. Coding Exercise: IndexError Handling
