@@ -149,3 +149,8 @@ Find project code [here](Day29/day29.py)
 
 Today, I am learning "Errors, Exceptions and JSON Data"
 More info [here](Day30/Day30.md)
+
+## Day 31
+
+Today, I am Building a "Flash Card App Capstone Project"
+Find project code [here](Day31/day31.py)
