@@ -7,4 +7,5 @@ Steps for the project;
 
 1. Create the User Interface (UI) with Tkinter
 2. Create New Flash Cards
-3. Flip cars
+3. Flip cards
+4. Save Your Progress
