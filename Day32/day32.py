@@ -24,3 +24,12 @@
 #     connection.close()
 
 # ------------Working with the datetime Module--------------#
+import datetime as dt
+
+now = dt.datetime.now()
+year = now.year
+day = now.weekday()
+month = now.month
+
+date_of_birth = dt.datetime(year=1990, month=2, day=19, hour=4)
+print(date_of_birth)
