@@ -154,3 +154,8 @@ More info [here](Day30/Day30.md)
 
 Today, I am Building a "Flash Card App Capstone Project"
 Find project code [here](Day31/day31.py)
+
+## Day 32
+
+Today, I am learning "Send Email(smtplib) and Manage Dates(datetime)"
+More info [here](Day32/Day32.md)
