@@ -21,15 +21,39 @@
 #         to_addrs="wakabibrian23@yahoo.com",
 #         msg="Subject:Hello\n\nThis is the body of my email"
 #     )
-#     connection.close()
 
 # ------------Working with the datetime Module--------------#
+# import datetime as dt
+
+# now = dt.datetime.now()
+# year = now.year
+# day = now.weekday()
+# month = now.month
+
+# date_of_birth = dt.datetime(year=1990, month=2, day=19, hour=4)
+# print(date_of_birth)
+
+# ------------Challenge 1 - Send Motivational Quotes on Mondays via Email--------------#
+import smtplib
 import datetime as dt
+import random
+
+MY_EMAIL = "wakabibrian24@gmail.com"
+PASSWORD = "drduuhmbpunqudeo"
+
+
+with open("quotes.txt") as quotes_file:
+    quotes = quotes_file.readlines()
+    random_quote = random.choice(quotes)
 
 now = dt.datetime.now()
-year = now.year
 day = now.weekday()
-month = now.month
-
-date_of_birth = dt.datetime(year=1990, month=2, day=19, hour=4)
-print(date_of_birth)
+if day == 0:
+    with smtplib.SMTP("smtp.gmail.com") as connection:
+        connection.starttls()
+        connection.login(user=MY_EMAIL, password=PASSWORD)
+        connection.sendmail(
+            from_addr=MY_EMAIL,
+            to_addrs="wakabibrian95@gmail.com",
+            msg=f"Subject: Monday Motivation\n\n{random_quote}"
+        )
