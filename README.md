@@ -159,3 +159,8 @@ Find project code [here](Day31/day31.py)
 
 Today, I am learning "Send Email(smtplib) and Manage Dates(datetime)"
 More info [here](Day32/Day32.md)
+
+## Day 33
+
+Today, I am learning "API Endpoints and API Parameters"
+More info [here](Day33/Day33.md)
