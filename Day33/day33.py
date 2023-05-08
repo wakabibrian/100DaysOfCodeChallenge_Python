@@ -15,4 +15,24 @@ import requests
 # url takes the endpoint
 # returns a response code
 response = requests.get(url="http://api.open-notify.org/iss-now.json")
-print(response)
+
+# ------Working with Responses: HTTP Codes, Exceptions & JSON Data--------#
+# Response tells us if our request succeeded or it failed
+# 404 response code means that the thing doesnt exist
+# Always look at the first number
+# 1XX - hold on, something is happening - This is not final
+# 2XX - Everything was successful - you can get the data
+# 3XX - Go Away (You dont have permission to get this thing)
+# 4XX - You screwed Up e.g 404 - you screwed up, the thing you are looking for doesnt exist
+# 5XX - I (server for the data) screwed up; may be server or website is down
+
+# # actual response status code instead of response object
+# print(response.status_code)
+response.raise_for_status()  # incase of an error in the API
+
+# data = response.json()
+data = response.json()
+longitude = data["iss_position"]["longitude"]
+latitude = data["iss_position"]["latitude"]
+iss_position = (longitude, latitude)
+print(iss_position)
