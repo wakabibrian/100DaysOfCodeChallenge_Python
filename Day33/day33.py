@@ -109,8 +109,8 @@ import time
 
 MY_EMAIL = "wakabibrian24@gmail.com"
 PASSWORD = "drduuhmbpunqudeo"
-MY_LAT = 0.3747545  # Your latitude
-MY_LONG = 32.5572151  # Your longitude
+MY_LAT = 0.3747545
+MY_LONG = 32.5572151
 
 
 def iss_overhead():
@@ -120,8 +120,6 @@ def iss_overhead():
 
     iss_latitude = float(data["iss_position"]["latitude"])
     iss_longitude = float(data["iss_position"]["longitude"])
-
-    # Your position is within +5 or -5 degrees of the ISS position.
 
     if (MY_LAT - 5) <= iss_latitude <= (MY_LAT + 5) and (MY_LONG - 5) <= iss_longitude <= (MY_LONG + 5):
         return True
