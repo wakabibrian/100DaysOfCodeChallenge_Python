@@ -10,11 +10,11 @@
 # An API Endpoint is simply a URL (location where the data you want can be found)
 # You also have to make a request over the internet (API request) - requesting data from the endpoint
 # API request - simply requesting/getting a piece of data using their API
-import requests
+# import requests
 
-# url takes the endpoint
-# returns a response code
-response = requests.get(url="http://api.open-notify.org/iss-now.json")
+# # url takes the endpoint
+# # returns a response code
+# response = requests.get(url="http://api.open-notify.org/iss-now.json")
 
 # ------Working with Responses: HTTP Codes, Exceptions & JSON Data--------#
 # Response tells us if our request succeeded or it failed
@@ -28,11 +28,76 @@ response = requests.get(url="http://api.open-notify.org/iss-now.json")
 
 # # actual response status code instead of response object
 # print(response.status_code)
-response.raise_for_status()  # incase of an error in the API
+# response.raise_for_status()  # incase of an error in the API
+
+# # data = response.json()
+# data = response.json()
+# longitude = data["iss_position"]["longitude"]
+# latitude = data["iss_position"]["latitude"]
+# iss_position = (longitude, latitude)
+# print(iss_position)
+
+# ------Challenge - Build a Kanye Quotes App using the Kanye Rest API--------#
+# from tkinter import *
+# import requests
+
+
+# def get_quote():
+#     response = requests.get("https://api.kanye.rest/")
+#     response.raise_for_status()
+
+#     data = response.json()
+#     quote = data["quote"]
+#     canvas.itemconfig(quote_text, text=quote)
+
+
+# window = Tk()
+# window.title("Kanye Says...")
+# window.config(padx=50, pady=50)
+
+# canvas = Canvas(width=300, height=414)
+# background_img = PhotoImage(file="background.png")
+# canvas.create_image(150, 207, image=background_img)
+# quote_text = canvas.create_text(150, 207, text="Kanye Quote Goes HERE", width=250, font=(
+#     "Arial", 22, "bold"), fill="white")
+# canvas.grid(row=0, column=0)
+
+# kanye_img = PhotoImage(file="kanye.png")
+# kanye_button = Button(image=kanye_img, highlightthickness=0, command=get_quote)
+# kanye_button.grid(row=1, column=0)
+
+
+# window.mainloop()
+
+# ------Understand API Parameters: Match Sunset Times with the Current Time--------#
+# API Parameters: This is a way that allows to give an input when making your API requests so
+# that you can get different pieces of data back depending on your input.
+# Not all APIs have parameters
+# Some parameters are required and some are optional. The optional ones have default values
+# import requests
+# import datetime
+
+# MY_LAT = 0.3747545
+# MY_LONG = 32.5572151
+
+# parameters = {
+#     "lat": MY_LAT,
+#     "lng": MY_LONG,
+#     "formatted": 0
+# }
+
+# response = requests.get(
+#     "https://api.sunrise-sunset.org/json", params=parameters)
+# response.raise_for_status()
 
 # data = response.json()
-data = response.json()
-longitude = data["iss_position"]["longitude"]
-latitude = data["iss_position"]["latitude"]
-iss_position = (longitude, latitude)
-print(iss_position)
+# sunrise = data["results"]["sunrise"].split("T")[1].split(":")[0]
+# sunset = data["results"]["sunset"].split("T")[1].split(":")[0]
+# print(sunrise)
+# print(sunset)
+
+# time_now = datetime.datetime.now()
+# hour = time_now.hour
+# print(hour)
+
+# ------Day 33 Project: ISS Overhead Notifier Project--------#
