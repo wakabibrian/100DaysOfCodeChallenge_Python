@@ -5,4 +5,4 @@ Find project code [here](Day34/day34.py)
 
 Steps of the project:
 
-1.
+1. Trivia Question API Challenge
