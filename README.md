@@ -164,3 +164,8 @@ More info [here](Day32/Day32.md)
 
 Today, I am learning "API Endpoints and API Parameters"
 More info [here](Day33/Day33.md)
+
+## Day 34
+
+Today, I am Building a "Creating a GUI Quiz App - API Practice"
+Find project code [here](Day34/day34.py)
