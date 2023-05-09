@@ -19,3 +19,14 @@ quiz_ui = QuizInterface(quiz)
 
 print("You've completed the quiz")
 print(f"Your final score was: {quiz.score}/{quiz.question_number}")
+
+# -----------Python Typing: Type Hints and Arrows ->--------#
+# Type Hints specifies the datatype of a variable or function to prevent errors
+# : - variable, -> for functions
+# e.g age: int
+# e.g def can_drive(age: int) -> bool
+# if age > 18:
+#     can_drive = True
+# else:
+#     can_drive = False
+# return can_drive
