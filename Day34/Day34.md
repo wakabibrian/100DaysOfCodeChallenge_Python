@@ -10,3 +10,4 @@ Steps of the project:
 3. Class based Tkinter UI
 4. Python Typing & Showing the Next Question in the GUI
 5. Python Typing: Type Hints and Arrows ->
+6. Check the Answer
