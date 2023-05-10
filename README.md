@@ -169,3 +169,8 @@ More info [here](Day33/Day33.md)
 
 Today, I am Building a "Creating a GUI Quiz App - API Practice"
 Find project code [here](Day34/day34.py)
+
+## Day 35
+
+Today, I am learning "Keys, Authentication, Environment Variables: Send SMS"
+More info [here](Day35/Day35.md)
