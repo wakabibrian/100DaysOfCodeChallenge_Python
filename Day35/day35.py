@@ -11,12 +11,13 @@
 # --- Sending SMS via the Twilio API ---#
 
 import requests
+import os
 from twilio.rest import Client
 
 account_sid = 'AC36f1949ee8c4f9f1cc9259966ec747c1'
-auth_token = 'e627c7fe6489770612c1c523c6e107c0'
+auth_token = os.environ.get("AUTH_TOKEN")
 
-api_key = "69f04e4613056b159c2761a9d9e664d2"
+api_key = os.environ.get("OWM_API_KEY")
 # MY_LAT = 0.3747545
 # MY_LONG = 32.5572151
 MY_LAT = 23.731939
@@ -48,3 +49,10 @@ if any(condition_codes) < 700:
             to='+256781876735'
         )
     print(message.status)
+
+# --- Understanding Environment Variables and Hiding API Keys---#
+# Uses of Environment Variables
+# 1. Convenience
+# 2. Security - Not store authetication keys in the same file
+# Help to separate our secrete staff, keys from the rest of the code
+# export OWM_API_KEY="key"

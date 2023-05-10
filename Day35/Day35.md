@@ -9,3 +9,4 @@ Today I lean't;
 2. Using API Keys to Authenticate and Get the Weather from OpenWeatherMap
 3. Challenge - Check if it Will Rain in the Next 12 Hours
 4. Sending SMS via the Twilio API
+5. Understanding Environment Variables and Hiding API Keys
