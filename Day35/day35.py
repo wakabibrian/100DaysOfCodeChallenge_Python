@@ -8,8 +8,13 @@
 
 # --- Using API Keys to Authenticate and Get the Weather from OpenWeatherMap ---#
 # --- Challenge - Check if it Will Rain in the Nextx 12 Hours ---#
+# --- Sending SMS via the Twilio API ---#
 
 import requests
+from twilio.rest import Client
+
+account_sid = 'AC36f1949ee8c4f9f1cc9259966ec747c1'
+auth_token = '7eae89d9db81f95f728dafd1247e6920'
 
 api_key = "69f04e4613056b159c2761a9d9e664d2"
 # MY_LAT = 0.3747545
@@ -35,13 +40,11 @@ condition_codes = [hour_data["weather"][0]["id"]
                    for hour_data in weather_slice]
 
 if any(condition_codes) < 700:
-    print("Bring an Umbrella")
-
-# will_rain = False
-
-# for condition_code in condition_codes:
-#     if condition_code < 700:
-#         will_rain = True
-
-# if will_rain:
-#     print("Bring an Umbrella")
+    client = Client(account_sid, auth_token)
+    message = client.messages \
+        .create(
+            body="It's going to rain today. Remember to bring an umbrella",
+            from_='+12706068755',
+            to='+256781876735'
+        )
+    print(message.status)
