@@ -18,10 +18,10 @@ account_sid = 'AC36f1949ee8c4f9f1cc9259966ec747c1'
 auth_token = os.environ.get("AUTH_TOKEN")
 
 api_key = os.environ.get("OWM_API_KEY")
-# MY_LAT = 0.3747545
-# MY_LONG = 32.5572151
-MY_LAT = 23.731939
-MY_LONG = -99.150818
+MY_LAT = 0.3747545
+MY_LONG = 32.5572151
+# MY_LAT = 23.731939
+# MY_LONG = -99.150818
 
 parameters = {
     "lat": MY_LAT,

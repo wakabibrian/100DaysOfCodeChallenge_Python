@@ -174,3 +174,8 @@ Find project code [here](Day34/day34.py)
 
 Today, I am learning "Keys, Authentication, Environment Variables: Send SMS"
 More info [here](Day35/Day35.md)
+
+## Day 36
+
+Today, I am Building a "Stock Trading News Aleart Project"
+Find project code [here](Day36/day36.py)
