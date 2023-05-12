@@ -9,3 +9,4 @@ I learn't;
 3. Advanced Authentication using an HTTP Header
 4. Challenge: Add a Pixel to the Habit Tracker using a Post Request
 5. Autofilling today's date using strftime
+6. How to use HTTP Put and Delete Requests

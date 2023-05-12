@@ -45,15 +45,30 @@ headers = {
 
 pixel_end_point = f"{graph_end_point}/{GRAPH_ID}"
 
-today = datetime(year=2023, month=5, day=11)
-# today = datetime.now()
+# yesterday = datetime(year=2023, month=5, day=11)
+today = datetime.now()
 # print(today.strftime("%Y%m%d"))
 
 pixel_params = {
     "date": today.strftime("%Y%m%d"),
-    "quantity": "8",
+    "quantity": input("How many hours did you code today? "),
 }
 
 response = requests.post(
     url=pixel_end_point, json=pixel_params, headers=headers)
 print(response.text)
+
+# Update/PUT method
+# put_end_point = f"{pixel_end_point}/{yesterday.strftime('%Y%m%d')}"
+
+# update_data = {
+#     "quantity": "6"
+# }
+
+# response = requests.put(url=put_end_point, json=update_data, headers=headers)
+# print(response.text)
+
+# Delete Method
+# delete_end_point = f"{pixel_end_point}/{yesterday.strftime('%Y%m%d')}"
+# response = requests.delete(url=delete_end_point, headers=headers)
+# print(response.text)
