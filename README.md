@@ -179,3 +179,8 @@ More info [here](Day35/Day35.md)
 
 Today, I am Building a "Stock Trading News Aleart Project"
 Find project code [here](Day36/day36.py)
+
+## Day 37
+
+Today, I am learning "API Post request and headers"
+More info [here](Day37/Day37.md)
