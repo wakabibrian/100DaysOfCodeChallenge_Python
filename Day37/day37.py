@@ -10,6 +10,7 @@ import requests
 
 USERNAME = "wakabi"
 TOKEN = "hehstdkkahasredadj"
+GRAPH_ID = "graph1"
 
 pixela_end_point = "https://pixe.la/v1/users"
 user_params = {
@@ -24,7 +25,7 @@ user_params = {
 
 graph_end_point = f"{pixela_end_point}/{USERNAME}/graphs"
 graph_config = {
-    "id": "graph1",
+    "id": GRAPH_ID,
     "name": "Coding Graph",
     "unit": "hr",
     "type": "int",
@@ -37,6 +38,17 @@ headers = {
     "X-USER-TOKEN": TOKEN
 }
 
+# response = requests.post(
+#     url=graph_end_point, json=graph_config, headers=headers)
+# print(response.text)
+
+pixel_end_point = f"{graph_end_point}/{GRAPH_ID}"
+
+pixel_params = {
+    "date": "20230512",
+    "quantity": "4",
+}
+
 response = requests.post(
-    url=graph_end_point, json=graph_config, headers=headers)
+    url=pixel_end_point, json=pixel_params, headers=headers)
 print(response.text)
