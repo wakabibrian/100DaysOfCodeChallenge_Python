@@ -7,6 +7,7 @@
 
 # -------------Day 37 project: Habbit tracker-----------------#
 import requests
+from datetime import datetime
 
 USERNAME = "wakabi"
 TOKEN = "hehstdkkahasredadj"
@@ -44,9 +45,13 @@ headers = {
 
 pixel_end_point = f"{graph_end_point}/{GRAPH_ID}"
 
+today = datetime(year=2023, month=5, day=11)
+# today = datetime.now()
+# print(today.strftime("%Y%m%d"))
+
 pixel_params = {
-    "date": "20230512",
-    "quantity": "4",
+    "date": today.strftime("%Y%m%d"),
+    "quantity": "8",
 }
 
 response = requests.post(
