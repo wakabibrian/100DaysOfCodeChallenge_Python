@@ -11,6 +11,7 @@ HEIGHT = 182.88
 AGE = 33
 
 exercise_endpoint = "https://trackapi.nutritionix.com/v2/natural/exercise"
+sheet_endpoint = "https://api.sheety.co/dad72c5769ebd68b690a01022338ff46/wakabiWorkouts/workouts"
 
 exercise_text = input("Tell me which exercise  you did: ")
 
@@ -38,7 +39,7 @@ today_time = datetime.now().strftime("%H:%M:%S")
 
 for exercise in result["exercises"]:
     sheet_inputs = {
-        "workouts": {
+        "workout": {
             "date": today_date,
             "time": today_time,
             "exercise": exercise["name"].title(),
@@ -47,4 +48,7 @@ for exercise in result["exercises"]:
         }
     }
 
-    print(sheet_inputs)
+    sheet_response = requests.post(sheet_endpoint, json=sheet_inputs)
+
+    print("response.status_code =", sheet_response.status_code)
+    print("response.text =", sheet_response.text)
