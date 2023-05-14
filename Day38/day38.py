@@ -1,9 +1,12 @@
+import os
 import requests
 from datetime import datetime
 
-APP_ID = "2ff64d50"
-API_KEY = "8c97dd43ab1488c119a124ae6ab26f1c"
-MY_EMAIL = "wakabibrian95@gmail.com"
+APP_ID = os.environ.get("APP_ID")
+API_KEY = os.environ.get("API_KEY")
+MY_EMAIL = os.environ.get("MY_EMAIL")
+MY_PASSWORD = os.environ.get("MY_PASSWORD")
+
 
 GENDER = "male"
 WEIGHT = 58
@@ -11,7 +14,7 @@ HEIGHT = 182.88
 AGE = 33
 
 exercise_endpoint = "https://trackapi.nutritionix.com/v2/natural/exercise"
-sheet_endpoint = "https://api.sheety.co/dad72c5769ebd68b690a01022338ff46/wakabiWorkouts/workouts"
+sheet_endpoint = os.environ.get("SHEET_ENDPOINT")
 
 exercise_text = input("Tell me which exercise  you did: ")
 
@@ -48,7 +51,16 @@ for exercise in result["exercises"]:
         }
     }
 
-    sheet_response = requests.post(sheet_endpoint, json=sheet_inputs)
+    # sheet_response = requests.post(sheet_endpoint, json=sheet_inputs)
+    # Basic Authentication
+    sheet_response = requests.post(
+        sheet_endpoint,
+        json=sheet_inputs,
+        auth=(
+            MY_EMAIL,
+            MY_PASSWORD,
+        )
+    )
 
     print("response.status_code =", sheet_response.status_code)
     print("response.text =", sheet_response.text)
