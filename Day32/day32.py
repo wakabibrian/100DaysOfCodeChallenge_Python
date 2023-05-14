@@ -84,6 +84,6 @@ if today_tupple in birthdays_dict:
         connection.login(user=MY_EMAIL, password=PASSWORD)
         connection.sendmail(
             from_addr=MY_EMAIL,
-            to_addrs=birthday_person["email"],
+            to_addrs="wakabibrian95@gmail.com",
             msg=f"Subject: Happy Birthday!\n\n{contents}"
         )

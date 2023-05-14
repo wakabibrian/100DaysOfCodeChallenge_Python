@@ -1,11 +1,12 @@
+import os
 import smtplib
 import datetime as dt
 import random
 import json
 
-MY_EMAIL = "wakabibrian95@gmail.com"
-PASSWORD = "iqcysjygarcvxddg"
-CHALLENGE = f"- Code 10 hours\n- No to distructions\n- No eating out\n- No to x\n- No spending"
+MY_EMAIL = "wakabibrian24@gmail.com"
+PASSWORD = os.environ.get("MY_PASSWORD")
+CHALLENGE = f"- Code 10 hours\n- No to distractions\n- No eating out\n- No spending"
 GOAL = f"- Finish Python and Django\n- Finish HTML, CSS, SASS\n- Finish Javascript and React\n- Finish DevOps"
 PROJECTS = f"- Launch Personal Blog\n- To Do App"
 REWARDS = f"- Move to a new house\n- Buy a new fridge\n- Buy a 62 inch TV"
