@@ -194,3 +194,8 @@ Find project code [here](Day38/day38.py)
 
 Today, I am Building a "Flight Dealer Finder - Part 1"
 Find project code [here](Day39/day39.py)
+
+## Day 45
+
+Today, I am learning "Web scraping"
+More info [here](Day45/Day45.md)

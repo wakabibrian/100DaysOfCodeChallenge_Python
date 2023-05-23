@@ -13,9 +13,21 @@ class DataManager:
         self.destination_data = data["prices"]
         return self.destination_data
 
-# 5. In main.py check if sheet_data contains any values for the "iataCode" key.
-# If not, then the IATA Codes column is empty in the Google Sheet.
-# In this case, pass each city name in sheet_data one-by-one to the FlightSearch class.
-# For now, the FlightSearch class can respond with "TESTING" instead of a real IATA code.
-# You should use the response from the FlightSearch class to update the sheet_data dictionary.
-# Print the updated sheet_data dictionary and you should see:
+    def update_destination_codes(self):
+        for city in self.destination_data:
+            new_data = {
+                "price": {
+                    "iataCode": city["iataCode"]
+                }
+            }
+            response = requests.put(
+                url=f"{SHEETY_PRICES_ENDPOINT}/{city['id']}",
+                json=new_data
+            )
+            print(response.text)
+
+#     6. In the DataManager Class make a PUT request and use the row id
+# from sheet_data to update the Google Sheet with the IATA codes. (Do this using code).
+# HINT: Remember to check the checkbox to allow PUT requests in Sheety.
+
+# Take a look at the Sheety API documentation to help you:
